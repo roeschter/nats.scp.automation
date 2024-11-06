@@ -1,4 +1,4 @@
-package com.synadia.automation;
+package com.synadia.automation.impl;
 
 public interface Logger {
 	public void logScript( String s);

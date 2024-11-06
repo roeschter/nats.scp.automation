@@ -1,4 +1,4 @@
-package com.synadia.automation;
+package com.synadia.automation.impl;
 
 
 import java.io.File;
@@ -25,18 +25,19 @@ import java.util.Map.Entry;
 
 public class SCPAPI implements Logger {
 
-	static String SCP_URL = "SCP_URL";
-	static String SCP_BEARER = "SCP_BEARER";
+	public static String SCP_URL = "SCP_URL";
+	public static String SCP_BEARER = "SCP_BEARER";
 
-	static String SCP_TEMPLATES = "SCP_TEMPLATES";
-	static String SCP_OUTPUT = "SCP_OUTPUT";
-	static String SCP_LOG = "SCP_LOG";
+	public static String SCP_TEMPLATES = "SCP_TEMPLATES";
+	public static String SCP_OUTPUT = "SCP_OUTPUT";
+	public static String SCP_LOG = "SCP_LOG";
 
-	static String SCP_SYSTEM = "SCP_SYSTEM";
-	static String SCP_SYSTEM_NAME = "SCP_SYSTEM_NAME";
-	static String SCP_TEAM = "SCP_TEAM";
-	static String SCP_TEAM_NAME = "SCP_TEAM_NAME";
-
+	public static String SCP_SYSTEM = "SCP_SYSTEM";
+	public static String SCP_SYSTEM_NAME = "SCP_SYSTEM_NAME";
+	public static String SCP_TEAM = "SCP_TEAM";
+	public static String SCP_TEAM_NAME = "SCP_TEAM_NAME";
+	public static String SCP_ACCOUNT = "SCP_ACCOUNT";
+	public static String SCP_USER = "SCP_USER";
 
 	static String ENC = "UTF-8";
 	static String QUOTE = "\'";
@@ -234,7 +235,10 @@ public class SCPAPI implements Logger {
 	public String[] envList( String var, String _default )
 	{
 		String raw = env( var, _default);
-		return raw.split(",");
+		String[] list = raw.split(",");
+		for (int i=0; i<list.length; i++)
+			list[i] = list[i].trim();
+		return list;
 	}
 
 	public String env( String var, String _default )

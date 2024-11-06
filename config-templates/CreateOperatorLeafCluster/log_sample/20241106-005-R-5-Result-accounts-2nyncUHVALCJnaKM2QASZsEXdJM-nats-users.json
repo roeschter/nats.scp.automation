@@ -1,0 +1,260 @@
+{"items": [
+    {
+        "sk_group_id": "2nyncRkJoh0WFfY7OV7FBKOZk6o",
+        "user_public_key": "UAK4S3HNX7TUZ4EMSHFCU263ILBBR4LSA3KKCPSRSYDLLOIAP32B6X6J",
+        "created": "2024-10-26T15:37:28.825326Z",
+        "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJlZDI1NTE5LW5rZXkifQ.eyJqdGkiOiIzS0Y2VUpOU09UNFlQV0NRUkdUMlpXWllMTDVNRlg1QzZEUkJYT1ZGSzdRNUhFUURNNFBRIiwiaWF0IjoxNzI5OTU4ODEzLCJpc3MiOiJBQU1aQ1RMTExEWDRMTktXUldRM1RVRzYyVDJNTTQ2WjU0WlZGUU82T0UzWEtUR1paTjdFWTNWWCIsIm5hbWUiOiJDT05ORUNULUxFQUYxIiwic3ViIjoiVUFLNFMzSE5YN1RVWjRFTVNIRkNVMjYzSUxCQlI0TFNBM0tLQ1BTUlNZRExMT0lBUDMyQjZYNkoiLCJuYXRzIjp7InB1YiI6eyJhbGxvdyI6WyIiXSwiZGVueSI6WyIiXX0sInN1YiI6eyJhbGxvdyI6WyIiXSwiZGVueSI6WyIiXX0sInJlc3AiOnsibWF4IjowLCJ0dGwiOjB9LCJzcmMiOlsic3RyaW5nIl0sInRpbWVzIjpbeyJzdGFydCI6InN0cmluZyIsImVuZCI6InN0cmluZyJ9XSwidGltZXNfbG9jYXRpb24iOiJzdHJpbmciLCJhbGxvd2VkX2Nvbm5lY3Rpb25fdHlwZXMiOlsiIl0sImlzc3Vlcl9hY2NvdW50IjoiQUJJSjNKSExEVjVGM0RVVUQ3U0NTUVNGRVNMRk5TR1JGNFdMRU8zUllXQ0dYSjVDVDVaREtRNDciLCJ0YWdzIjpbIiJdLCJ0eXBlIjoidXNlciIsInZlcnNpb24iOjJ9fQ.3zURzecMHOpKtAxV2s7goPr2M2yhZHcOpu5EJ6cbuCRM7F12OjcUp4ItlFya2MjO56r1Mp5WwK5XBJMc8gISAQ",
+        "team": {
+            "name": "Default",
+            "id": "2lt5YCgoCRFM4ohxFQkICD00UmJ"
+        },
+        "jwt_expires_at_max": -1,
+        "system": {
+            "jetstream_enabled": true,
+            "is_tenant": false,
+            "http_gateway_url": "",
+            "connection_type": "Direct",
+            "name": "C10_CP",
+            "server_urls": "nats://172.23.128.1:4211",
+            "user_jwt_expires_in_secs": 0,
+            "id": "2lt7DrYLEKVkq2KX5gIt5YlJXvv",
+            "state": "Disconnected"
+        },
+        "jwt_settings": {
+            "sub": {
+                "allow": [""],
+                "deny": [""]
+            },
+            "times": [{
+                "start": "string",
+                "end": "string"
+            }],
+            "times_location": "string",
+            "resp": {
+                "max": 0,
+                "ttl": 0
+            },
+            "src": ["string"],
+            "allowed_connection_types": [""],
+            "pub": {
+                "allow": [""],
+                "deny": [""]
+            },
+            "tags": [""]
+        },
+        "claims": {
+            "sub": "UAK4S3HNX7TUZ4EMSHFCU263ILBBR4LSA3KKCPSRSYDLLOIAP32B6X6J",
+            "nats": {
+                "sub": {
+                    "allow": [""],
+                    "deny": [""]
+                },
+                "times": [{
+                    "start": "string",
+                    "end": "string"
+                }],
+                "times_location": "string",
+                "resp": {
+                    "max": 0,
+                    "ttl": 0
+                },
+                "src": ["string"],
+                "allowed_connection_types": [""],
+                "issuer_account": "ABIJ3JHLDV5F3DUUD7SCSQSFESLFNSGRF4WLEO3RYWCGXJ5CT5ZDKQ47",
+                "pub": {
+                    "allow": [""],
+                    "deny": [""]
+                },
+                "type": "user",
+                "version": 2,
+                "tags": [""]
+            },
+            "iss": "AAMZCTLLLDX4LNKWRWQ3TUG62T2MM46Z54ZVFQO6OE3XKTGZZN7EY3VX",
+            "name": "CONNECT-LEAF1",
+            "iat": 1729958813,
+            "jti": "3KF6UJNSOT4YPWCQRGT2ZWZYLL5MFX5C6DRBXOVFK7Q5HEQDM4PQ"
+        },
+        "name": "CONNECT-LEAF1",
+        "jwt_expires_in_secs": 0,
+        "id": "2nytGZLQDKZ3OiR11R5vBArnvSJ",
+        "account": {
+            "account_public_key": "ABIJ3JHLDV5F3DUUD7SCSQSFESLFNSGRF4WLEO3RYWCGXJ5CT5ZDKQ47",
+            "name": "hAccountA",
+            "user_jwt_expires_in_secs": 0,
+            "id": "2nyncUHVALCJnaKM2QASZsEXdJM",
+            "is_system_account": false,
+            "is_scp_account": false
+        }
+    },
+    {
+        "sk_group_id": "2nyncRkJoh0WFfY7OV7FBKOZk6o",
+        "user_public_key": "UAQTJPFQ3INIIYUBEGC2KT7LZBW762TFCKHQYCI4KBFXYOATJQSTIMA6",
+        "created": "2024-11-04T12:23:11.54458Z",
+        "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJlZDI1NTE5LW5rZXkifQ.eyJqdGkiOiJRV0FSQldTM0JFSFgzRUo3MkdaQVYyMkhONkJZUTNDNDJZUEs3Tlo3SFdYSUxYT1hHQzZRIiwiaWF0IjoxNzMwOTE5MzMzLCJpc3MiOiJBQU1aQ1RMTExEWDRMTktXUldRM1RVRzYyVDJNTTQ2WjU0WlZGUU82T0UzWEtUR1paTjdFWTNWWCIsIm5hbWUiOiJDT05ORUNULUxFQUYyIiwic3ViIjoiVUFRVEpQRlEzSU5JSVlVQkVHQzJLVDdMWkJXNzYyVEZDS0hRWUNJNEtCRlhZT0FUSlFTVElNQTYiLCJuYXRzIjp7InB1YiI6e30sInN1YiI6e30sInN1YnMiOi0xLCJkYXRhIjotMSwicGF5bG9hZCI6LTEsImlzc3Vlcl9hY2NvdW50IjoiQUJJSjNKSExEVjVGM0RVVUQ3U0NTUVNGRVNMRk5TR1JGNFdMRU8zUllXQ0dYSjVDVDVaREtRNDciLCJ0eXBlIjoidXNlciIsInZlcnNpb24iOjJ9fQ.6e8m7UENiMjofS9VECPYNEKyI7xWhVlLSqso2RjeqO0chlD51iuiW-_twHMuNTwirAbZfhQjMCj-XrBffSLbDw",
+        "team": {
+            "name": "Default",
+            "id": "2lt5YCgoCRFM4ohxFQkICD00UmJ"
+        },
+        "jwt_expires_at_max": -1,
+        "system": {
+            "jetstream_enabled": true,
+            "is_tenant": false,
+            "http_gateway_url": "",
+            "connection_type": "Direct",
+            "name": "C10_CP",
+            "server_urls": "nats://172.23.128.1:4211",
+            "user_jwt_expires_in_secs": 0,
+            "id": "2lt7DrYLEKVkq2KX5gIt5YlJXvv",
+            "state": "Disconnected"
+        },
+        "jwt_settings": {
+            "sub": {},
+            "data": -1,
+            "subs": -1,
+            "payload": -1,
+            "pub": {}
+        },
+        "claims": {
+            "sub": "UAQTJPFQ3INIIYUBEGC2KT7LZBW762TFCKHQYCI4KBFXYOATJQSTIMA6",
+            "nats": {
+                "sub": {},
+                "data": -1,
+                "subs": -1,
+                "payload": -1,
+                "issuer_account": "ABIJ3JHLDV5F3DUUD7SCSQSFESLFNSGRF4WLEO3RYWCGXJ5CT5ZDKQ47",
+                "pub": {},
+                "type": "user",
+                "version": 2
+            },
+            "iss": "AAMZCTLLLDX4LNKWRWQ3TUG62T2MM46Z54ZVFQO6OE3XKTGZZN7EY3VX",
+            "name": "CONNECT-LEAF2",
+            "iat": 1730919333,
+            "jti": "QWARBWS3BEHX3EJ72GZAV22HN6BYQ3C42YPK7NZ7HWXILXOXGC6Q"
+        },
+        "name": "CONNECT-LEAF2",
+        "jwt_expires_in_secs": 0,
+        "id": "2oNvkbez2iQ1QbM3EOjy6Xnb81f",
+        "account": {
+            "account_public_key": "ABIJ3JHLDV5F3DUUD7SCSQSFESLFNSGRF4WLEO3RYWCGXJ5CT5ZDKQ47",
+            "name": "hAccountA",
+            "user_jwt_expires_in_secs": 0,
+            "id": "2nyncUHVALCJnaKM2QASZsEXdJM",
+            "is_system_account": false,
+            "is_scp_account": false
+        }
+    },
+    {
+        "sk_group_id": "2nyncRkJoh0WFfY7OV7FBKOZk6o",
+        "user_public_key": "UARIXXBDOFYXJOOJ3MASAWXN76UZJDYYAQMH5IS6TCHB66MPIJ7GGK77",
+        "created": "2024-11-06T07:42:17.277836Z",
+        "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJlZDI1NTE5LW5rZXkifQ.eyJqdGkiOiJPWktFRjNPV1ZTSjZVUVdDVkM0TjJFWkRZWldESzdUTEVRVE9XTkxBV0tTWVNBNk5EUlRBIiwiaWF0IjoxNzMwODc4OTM3LCJpc3MiOiJBQU1aQ1RMTExEWDRMTktXUldRM1RVRzYyVDJNTTQ2WjU0WlZGUU82T0UzWEtUR1paTjdFWTNWWCIsIm5hbWUiOiJDT05ORUNULUxFQUYzIiwic3ViIjoiVUFSSVhYQkRPRllYSk9PSjNNQVNBV1hONzZVWkpEWVlBUU1INUlTNlRDSEI2Nk1QSUo3R0dLNzciLCJuYXRzIjp7InB1YiI6e30sInN1YiI6e30sInN1YnMiOi0xLCJkYXRhIjotMSwicGF5bG9hZCI6LTEsImlzc3Vlcl9hY2NvdW50IjoiQUJJSjNKSExEVjVGM0RVVUQ3U0NTUVNGRVNMRk5TR1JGNFdMRU8zUllXQ0dYSjVDVDVaREtRNDciLCJ0eXBlIjoidXNlciIsInZlcnNpb24iOjJ9fQ.LT8Ci-NtgF3YUw4RLunh2HTaAm-_oPxJWjjd_ktsKcJ6h82nMT0wCcOihg4bHnTZW4mFaNTzJ33ryUPdEhg_AQ",
+        "team": {
+            "name": "Default",
+            "id": "2lt5YCgoCRFM4ohxFQkICD00UmJ"
+        },
+        "jwt_expires_at_max": -1,
+        "system": {
+            "jetstream_enabled": true,
+            "is_tenant": false,
+            "http_gateway_url": "",
+            "connection_type": "Direct",
+            "name": "C10_CP",
+            "server_urls": "nats://172.23.128.1:4211",
+            "user_jwt_expires_in_secs": 0,
+            "id": "2lt7DrYLEKVkq2KX5gIt5YlJXvv",
+            "state": "Disconnected"
+        },
+        "jwt_settings": {
+            "sub": {},
+            "data": -1,
+            "subs": -1,
+            "payload": -1,
+            "pub": {}
+        },
+        "claims": {
+            "sub": "UARIXXBDOFYXJOOJ3MASAWXN76UZJDYYAQMH5IS6TCHB66MPIJ7GGK77",
+            "nats": {
+                "sub": {},
+                "data": -1,
+                "subs": -1,
+                "payload": -1,
+                "issuer_account": "ABIJ3JHLDV5F3DUUD7SCSQSFESLFNSGRF4WLEO3RYWCGXJ5CT5ZDKQ47",
+                "pub": {},
+                "type": "user",
+                "version": 2
+            },
+            "iss": "AAMZCTLLLDX4LNKWRWQ3TUG62T2MM46Z54ZVFQO6OE3XKTGZZN7EY3VX",
+            "name": "CONNECT-LEAF3",
+            "iat": 1730878937,
+            "jti": "OZKEF3OWVSJ6UQWCVC4N2EZDYZWDK7TLEQTOWNLAWKSYSA6NDRTA"
+        },
+        "name": "CONNECT-LEAF3",
+        "jwt_expires_in_secs": 0,
+        "id": "2oT1pyGfmE8mLpSIXtmGPGabIiG",
+        "account": {
+            "account_public_key": "ABIJ3JHLDV5F3DUUD7SCSQSFESLFNSGRF4WLEO3RYWCGXJ5CT5ZDKQ47",
+            "name": "hAccountA",
+            "user_jwt_expires_in_secs": 0,
+            "id": "2nyncUHVALCJnaKM2QASZsEXdJM",
+            "is_system_account": false,
+            "is_scp_account": false
+        }
+    },
+    {
+        "sk_group_id": "2nyncRkJoh0WFfY7OV7FBKOZk6o",
+        "user_public_key": "UB46F4HWVF2I7PGTM7YQIZEPGJ4SGTEAACWPIUNC6EY3CJCOGTADX5N4",
+        "created": "2024-11-04T11:53:15.137598Z",
+        "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJlZDI1NTE5LW5rZXkifQ.eyJqdGkiOiJLM0VJWFFaRlZQUzRLR0hURklYWVJKU0tVQjRRSkpHQVlSVkxHWTRKQlE2SVdWUDVOTE5BIiwiaWF0IjoxNzMwNzIxMjE0LCJpc3MiOiJBQU1aQ1RMTExEWDRMTktXUldRM1RVRzYyVDJNTTQ2WjU0WlZGUU82T0UzWEtUR1paTjdFWTNWWCIsIm5hbWUiOiJURVNUIiwic3ViIjoiVUI0NkY0SFdWRjJJN1BHVE03WVFJWkVQR0o0U0dURUFBQ1dQSVVOQzZFWTNDSkNPR1RBRFg1TjQiLCJuYXRzIjp7InB1YiI6e30sInN1YiI6e30sInN1YnMiOi0xLCJkYXRhIjotMSwicGF5bG9hZCI6LTEsImlzc3Vlcl9hY2NvdW50IjoiQUJJSjNKSExEVjVGM0RVVUQ3U0NTUVNGRVNMRk5TR1JGNFdMRU8zUllXQ0dYSjVDVDVaREtRNDciLCJ0eXBlIjoidXNlciIsInZlcnNpb24iOjJ9fQ.Hw0QLIQoQYWu0Cu87vefcIR6ysfUfsPbB3b4AVdjn7732FwejuyzXyKW08HUbJ6xbIz8GSEZew4Ic3_F6RnlDQ",
+        "team": {
+            "name": "Default",
+            "id": "2lt5YCgoCRFM4ohxFQkICD00UmJ"
+        },
+        "jwt_expires_at_max": -1,
+        "system": {
+            "jetstream_enabled": true,
+            "is_tenant": false,
+            "http_gateway_url": "",
+            "connection_type": "Direct",
+            "name": "C10_CP",
+            "server_urls": "nats://172.23.128.1:4211",
+            "user_jwt_expires_in_secs": 0,
+            "id": "2lt7DrYLEKVkq2KX5gIt5YlJXvv",
+            "state": "Disconnected"
+        },
+        "jwt_settings": {
+            "sub": {},
+            "data": -1,
+            "subs": -1,
+            "payload": -1,
+            "pub": {}
+        },
+        "claims": {
+            "sub": "UB46F4HWVF2I7PGTM7YQIZEPGJ4SGTEAACWPIUNC6EY3CJCOGTADX5N4",
+            "nats": {
+                "sub": {},
+                "data": -1,
+                "subs": -1,
+                "payload": -1,
+                "issuer_account": "ABIJ3JHLDV5F3DUUD7SCSQSFESLFNSGRF4WLEO3RYWCGXJ5CT5ZDKQ47",
+                "pub": {},
+                "type": "user",
+                "version": 2
+            },
+            "iss": "AAMZCTLLLDX4LNKWRWQ3TUG62T2MM46Z54ZVFQO6OE3XKTGZZN7EY3VX",
+            "name": "TEST",
+            "iat": 1730721214,
+            "jti": "K3EIXQZFVPS4KGHTFIXYRJSKUB4QJJGAYRVLGY4JBQ6IWVP5NLNA"
+        },
+        "name": "TEST",
+        "jwt_expires_in_secs": 0,
+        "id": "2oNs6tbTWI97MefviUsxKT2PwGz",
+        "account": {
+            "account_public_key": "ABIJ3JHLDV5F3DUUD7SCSQSFESLFNSGRF4WLEO3RYWCGXJ5CT5ZDKQ47",
+            "name": "hAccountA",
+            "user_jwt_expires_in_secs": 0,
+            "id": "2nyncUHVALCJnaKM2QASZsEXdJM",
+            "is_system_account": false,
+            "is_scp_account": false
+        }
+    }
+]}

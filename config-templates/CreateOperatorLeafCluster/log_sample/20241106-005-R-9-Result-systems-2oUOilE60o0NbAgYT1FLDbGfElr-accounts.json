@@ -1,0 +1,170 @@
+{"items": [
+    {
+        "jwt_sync_error": "",
+        "created": "2024-11-06T19:20:16.571606Z",
+        "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJlZDI1NTE5LW5rZXkifQ.eyJqdGkiOiJZUlBYUUNCSEdFVEtFWVlKSDJGSDMzRFczUUxSM0Y1UUhRNkJNNFFMVE1DNUpNUlpLQ0pBIiwiaWF0IjoxNzMwOTIwODE2LCJpc3MiOiJPRDZGVTNNT0dJSUxVQk5TSVVJNlE3M0NZSUEyU0U2WkZYUUdQM01YNElZR1BVTVVVUkxMWExRUSIsIm5hbWUiOiJTQ1AiLCJzdWIiOiJBQVpOQjY2VUtUR0xLSEJXV0JJT1RQVUdJWU0yVE9KUUVCTjQzNU9UV1k1VlYzUlJWTzcyMzJNUiIsIm5hdHMiOnsiYXV0aG9yaXphdGlvbiI6e30sImRlZmF1bHRfcGVybWlzc2lvbnMiOnsicHViIjp7fSwic3ViIjp7fX0sImV4cG9ydHMiOlt7ImFjY291bnRfdG9rZW5fcG9zaXRpb24iOjUsIm5hbWUiOiJKUyBFVkVOVCBFeHBvcnQgU2VydmljZSIsInN1YmplY3QiOiIkSlMuRVZFTlQuKi5BQ0MuKi5cdTAwM2UiLCJ0eXBlIjoic2VydmljZSJ9LHsiYWNjb3VudF90b2tlbl9wb3NpdGlvbiI6NCwibmFtZSI6IlNlcnZpY2UgT2JzZXJ2YXRpb24gRXhwb3J0IFNlcnZpY2UiLCJzdWJqZWN0IjoiJHNjcC5tZXRyaWNzLkFDQy4qLioiLCJ0eXBlIjoic2VydmljZSJ9XSwibGltaXRzIjp7ImNvbm4iOi0xLCJjb25zdW1lciI6LTEsImRhdGEiOi0xLCJkaXNrX3N0b3JhZ2UiOi0xLCJleHBvcnRzIjotMSwiaW1wb3J0cyI6LTEsImxlYWYiOi0xLCJtZW1fc3RvcmFnZSI6LTEsInBheWxvYWQiOi0xLCJzdHJlYW1zIjotMSwic3VicyI6LTEsIndpbGRjYXJkcyI6dHJ1ZX0sInNjcCI6eyJzeXN0ZW1faWQiOiIyb1VPaWxFNjBvME5iQWdZVDFGTERiR2ZFbHIiLCJhY2NvdW50X2lkIjoiMm9VT2lqNFdWUTFYN3JzNmtqQWpNeFQ1M29HIn0sInNpZ25pbmdfa2V5cyI6WyJBQVJUT0YzM1M1VzdINk81SlpFMkpXNUE3NlRWTVEzUlNSTVhSNVlPNUVXTURHN1FTQ0lJM1VMTyIsIkFDUVVFWUZKNlZIWUhLNFNNTldORVlRN05LREJJU0FEQUUyTFZaT0FCQUFVSFVXR01JNUlRNE1UIl0sInR5cGUiOiJhY2NvdW50IiwidmVyc2lvbiI6Mn19.O6Qt-UZf1c-Gqc-kviM-IEUwzOUChN9LP8bXGXmDJtwJNop4gMqP28tT3rVjjt8OB1gZhBZ9fk3zzT2QhbCiAA",
+        "account_public_key": "AAZNB66UKTGLKHBWWBIOTPUGIYM2TOJQEBN435OTWY5VV3RRVO7232MR",
+        "user_jwt_expires_in_secs": 0,
+        "team": {
+            "name": "Default",
+            "id": "2lt5YCgoCRFM4ohxFQkICD00UmJ"
+        },
+        "nsc_managed": false,
+        "is_system_account": false,
+        "is_scp_account": true,
+        "claims_info": {"js_enabled": true},
+        "system": {
+            "jetstream_enabled": true,
+            "is_tenant": false,
+            "http_gateway_url": "",
+            "connection_type": "Direct",
+            "name": "LEAF3",
+            "server_urls": "nats://172.23.128.1:4301",
+            "user_jwt_expires_in_secs": 0,
+            "id": "2oUOilE60o0NbAgYT1FLDbGfElr",
+            "state": "Provisioning",
+            "jetstream_domain": "LEAF3"
+        },
+        "jwt_sync_status": "InProgress",
+        "jwt_settings": {
+            "authorization": {},
+            "limits": {
+                "conn": -1,
+                "imports": -1,
+                "disk_storage": -1,
+                "data": -1,
+                "subs": -1,
+                "payload": -1,
+                "exports": -1,
+                "streams": -1,
+                "wildcards": true,
+                "leaf": -1,
+                "mem_storage": -1,
+                "consumer": -1
+            }
+        },
+        "claims": {
+            "sub": "AAZNB66UKTGLKHBWWBIOTPUGIYM2TOJQEBN435OTWY5VV3RRVO7232MR",
+            "nats": {
+                "default_permissions": {
+                    "sub": {},
+                    "pub": {}
+                },
+                "authorization": {},
+                "exports": [
+                    {
+                        "subject": "$JS.EVENT.*.ACC.*.>",
+                        "account_token_position": 5,
+                        "name": "JS EVENT Export Service",
+                        "type": "service"
+                    },
+                    {
+                        "subject": "$scp.metrics.ACC.*.*",
+                        "account_token_position": 4,
+                        "name": "Service Observation Export Service",
+                        "type": "service"
+                    }
+                ],
+                "signing_keys": [
+                    "AARTOF33S5W7H6O5JZE2JW5A76TVMQ3RSRMXR5YO5EWMDG7QSCII3ULO",
+                    "ACQUEYFJ6VHYHK4SMNWNEYQ7NKDBISADAE2LVZOABAAUHUWGMI5IQ4MT"
+                ],
+                "type": "account",
+                "version": 2,
+                "limits": {
+                    "conn": -1,
+                    "imports": -1,
+                    "disk_storage": -1,
+                    "data": -1,
+                    "subs": -1,
+                    "payload": -1,
+                    "exports": -1,
+                    "streams": -1,
+                    "wildcards": true,
+                    "leaf": -1,
+                    "mem_storage": -1,
+                    "consumer": -1
+                }
+            },
+            "iss": "OD6FU3MOGIILUBNSIUI6Q73CYIA2SE6ZFXQGP3MX4IYGPUMUURLLXLQQ",
+            "name": "SCP",
+            "iat": 1730920816,
+            "jti": "YRPXQCBHGETKEYYJH2FH33DW3QLR3F5QHQ6BM4QLTMC5JMRZKCJA"
+        },
+        "name": "SCP",
+        "id": "2oUOij4WVQ1X7rs6kjAjMxT53oG"
+    },
+    {
+        "jwt_sync_error": "",
+        "created": "2024-11-06T19:20:16.571606Z",
+        "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJlZDI1NTE5LW5rZXkifQ.eyJqdGkiOiJIREU1N0RCM1lPNk9ZWUczMldZUVFCSEUySFpPQTJVRUgyQ1Q3VkY1TDZIRDZUVUdTRlpBIiwiaWF0IjoxNzMwOTIwODE2LCJpc3MiOiJPRDZGVTNNT0dJSUxVQk5TSVVJNlE3M0NZSUEyU0U2WkZYUUdQM01YNElZR1BVTVVVUkxMWExRUSIsIm5hbWUiOiJTWVMiLCJzdWIiOiJBQk5ZVTI1MlFXVEdVNTdKWk1KSzU1VkJEVllaQ09WQjVKSkNTVURIWU1TVklDUFNRUzVMRVEzUiIsIm5hdHMiOnsiYXV0aG9yaXphdGlvbiI6e30sImRlZmF1bHRfcGVybWlzc2lvbnMiOnsicHViIjp7fSwic3ViIjp7fX0sImxpbWl0cyI6eyJjb25uIjotMSwiZGF0YSI6LTEsImV4cG9ydHMiOi0xLCJpbXBvcnRzIjotMSwibGVhZiI6LTEsInBheWxvYWQiOi0xLCJzdWJzIjotMSwid2lsZGNhcmRzIjp0cnVlfSwic2NwIjp7InN5c3RlbV9pZCI6IjJvVU9pbEU2MG8wTmJBZ1lUMUZMRGJHZkVsciIsImFjY291bnRfaWQiOiIyb1VPaWpKbGpNcE1Pem9IMFpRaFF3d2ZMUTMifSwic2lnbmluZ19rZXlzIjpbIkFCS1Y1R0ZTTkdISUY1QTZTNTNTQlBXV01DNUdIWDZXM1lPS0hUTjVXRUI1REpZT05HSzNBVkxZIiwiQUNMWk9XT1ZBNUZCV1lZVENBWDRHN05aREJDVTJMS0NPVEJPWFNNVEpZSDRNWjdOWVRTWExBQlEiXSwidHlwZSI6ImFjY291bnQiLCJ2ZXJzaW9uIjoyfX0.Xw-YEMKXN-I7EYHGCRcER30gdY0ra5808zr-KN0QDXpuSRqyRjOWlZyuQE1mxbIjaC0Ir3Lc_KaM1gr61THzBQ",
+        "account_public_key": "ABNYU252QWTGU57JZMJK55VBDVYZCOVB5JJCSUDHYMSVICPSQS5LEQ3R",
+        "user_jwt_expires_in_secs": 0,
+        "team": {
+            "name": "Default",
+            "id": "2lt5YCgoCRFM4ohxFQkICD00UmJ"
+        },
+        "nsc_managed": false,
+        "is_system_account": true,
+        "is_scp_account": false,
+        "claims_info": {"js_enabled": false},
+        "system": {
+            "jetstream_enabled": true,
+            "is_tenant": false,
+            "http_gateway_url": "",
+            "connection_type": "Direct",
+            "name": "LEAF3",
+            "server_urls": "nats://172.23.128.1:4301",
+            "user_jwt_expires_in_secs": 0,
+            "id": "2oUOilE60o0NbAgYT1FLDbGfElr",
+            "state": "Provisioning",
+            "jetstream_domain": "LEAF3"
+        },
+        "jwt_sync_status": "InProgress",
+        "jwt_settings": {
+            "authorization": {},
+            "limits": {
+                "conn": -1,
+                "imports": -1,
+                "data": -1,
+                "subs": -1,
+                "payload": -1,
+                "exports": -1,
+                "wildcards": true,
+                "leaf": -1
+            }
+        },
+        "claims": {
+            "sub": "ABNYU252QWTGU57JZMJK55VBDVYZCOVB5JJCSUDHYMSVICPSQS5LEQ3R",
+            "nats": {
+                "default_permissions": {
+                    "sub": {},
+                    "pub": {}
+                },
+                "authorization": {},
+                "signing_keys": [
+                    "ABKV5GFSNGHIF5A6S53SBPWWMC5GHX6W3YOKHTN5WEB5DJYONGK3AVLY",
+                    "ACLZOWOVA5FBWYYTCAX4G7NZDBCU2LKCOTBOXSMTJYH4MZ7NYTSXLABQ"
+                ],
+                "type": "account",
+                "version": 2,
+                "limits": {
+                    "conn": -1,
+                    "imports": -1,
+                    "data": -1,
+                    "subs": -1,
+                    "payload": -1,
+                    "exports": -1,
+                    "wildcards": true,
+                    "leaf": -1
+                }
+            },
+            "iss": "OD6FU3MOGIILUBNSIUI6Q73CYIA2SE6ZFXQGP3MX4IYGPUMUURLLXLQQ",
+            "name": "SYS",
+            "iat": 1730920816,
+            "jti": "HDE57DB3YO6OYYG32WYQQBHE2HZOA2UEH2CT7VF5L6HD6TUGSFZA"
+        },
+        "name": "SYS",
+        "id": "2oUOijJljMpMOzoH0ZQhQwwfLQ3"
+    }
+]}

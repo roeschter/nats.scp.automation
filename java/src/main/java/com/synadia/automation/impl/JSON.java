@@ -1,4 +1,4 @@
-package com.synadia.automation;
+package com.synadia.automation.impl;
 
 import java.util.ArrayList;
 
@@ -111,7 +111,8 @@ public class JSON {
 
 	public JSON getItemByKey( String key, String val ) {
 		JSON ret = new JSON(logger);
-		ret.setURI( uri + "/items/"+key+"="+val );
+		ret.setURI( uri );
+		ret.setFileName(fileName + "#/items/"+key+"="+val );
 		JSONArray list = json.getJSONArray("items");
 		int len = list.length();
 		for( int i=0; i<len; i++) {

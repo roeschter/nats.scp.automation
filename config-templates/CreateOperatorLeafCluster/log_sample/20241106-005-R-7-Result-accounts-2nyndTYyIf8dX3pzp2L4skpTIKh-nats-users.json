@@ -1,0 +1,183 @@
+{"items": [
+    {
+        "sk_group_id": "2nyndS7QGtw0dbIw2zGwWYaq0sc",
+        "user_public_key": "UCKNCSIG54KVDOWXJUNHLH4MH36RUDTO35SWWDHAWIPNCQV3OQAYTJVB",
+        "created": "2024-10-26T15:45:08.783204Z",
+        "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJlZDI1NTE5LW5rZXkifQ.eyJqdGkiOiJSVFYzSVM0RTRPRkxDSkpDTjdMV1FGSUQ3WDdZSFpXQlhKQkFYSVNDN09WNzVMRUFYVDJRIiwiaWF0IjoxNzI5OTU4ODEzLCJpc3MiOiJBQ0xWTERWSlVCVUsyRzVKUUtLMklSUzNMUldPRU9BM0ZFTEJLVjYyT09QTzdXUE9KV0lYNVdMRCIsIm5hbWUiOiJDT05ORUNULUxFQUYxIiwic3ViIjoiVUNLTkNTSUc1NEtWRE9XWEpVTkhMSDRNSDM2UlVEVE8zNVNXV0RIQVdJUE5DUVYzT1FBWVRKVkIiLCJuYXRzIjp7InB1YiI6e30sInN1YiI6e30sInJlc3AiOnsibWF4IjowLCJ0dGwiOjB9LCJzcmMiOlsiIl0sInRpbWVzIjpbe31dLCJhbGxvd2VkX2Nvbm5lY3Rpb25fdHlwZXMiOlsiIl0sImlzc3Vlcl9hY2NvdW50IjoiQUFUUUhVSTdISDRKRFpXM1BIWkdUM05MTkhPS0RCUlpHNkdNN1lGSjQ3TUczVzVYQ05LVVJOTjMiLCJ0YWdzIjpbIiJdLCJ0eXBlIjoidXNlciIsInZlcnNpb24iOjJ9fQ.KbJfgWTryCOUEbDRmkkY8D5cn_bnNy6Fz_Is74WhlX36v9QGnPAVzXM-d4tJ18yGXRtwHRPCrc2NF73JYNrOBQ",
+        "team": {
+            "name": "Default",
+            "id": "2lt5YCgoCRFM4ohxFQkICD00UmJ"
+        },
+        "jwt_expires_at_max": -1,
+        "system": {
+            "jetstream_enabled": true,
+            "is_tenant": false,
+            "http_gateway_url": "",
+            "connection_type": "Direct",
+            "name": "C10_CP",
+            "server_urls": "nats://172.23.128.1:4211",
+            "user_jwt_expires_in_secs": 0,
+            "id": "2lt7DrYLEKVkq2KX5gIt5YlJXvv",
+            "state": "Disconnected"
+        },
+        "jwt_settings": {
+            "sub": {},
+            "times": [{}],
+            "resp": {
+                "max": 0,
+                "ttl": 0
+            },
+            "src": [""],
+            "allowed_connection_types": [""],
+            "pub": {},
+            "tags": [""]
+        },
+        "claims": {
+            "sub": "UCKNCSIG54KVDOWXJUNHLH4MH36RUDTO35SWWDHAWIPNCQV3OQAYTJVB",
+            "nats": {
+                "sub": {},
+                "times": [{}],
+                "resp": {
+                    "max": 0,
+                    "ttl": 0
+                },
+                "src": [""],
+                "allowed_connection_types": [""],
+                "issuer_account": "AATQHUI7HH4JDZW3PHZGT3NLNHOKDBRZG6GM7YFJ47MG3W5XCNKURNN3",
+                "pub": {},
+                "type": "user",
+                "version": 2,
+                "tags": [""]
+            },
+            "iss": "ACLVLDVJUBUK2G5JQKK2IRS3LRWOEOA3FELBKV62OOPO7WPOJWIX5WLD",
+            "name": "CONNECT-LEAF1",
+            "iat": 1729958813,
+            "jti": "RTV3IS4E4OFLCJJCN7LWQFID7X7YHZWBXJBAXISC7OV75LEAXT2Q"
+        },
+        "name": "CONNECT-LEAF1",
+        "jwt_expires_in_secs": 0,
+        "id": "2nyuCTpNR5awxfwj7seFeLsui2n",
+        "account": {
+            "account_public_key": "AATQHUI7HH4JDZW3PHZGT3NLNHOKDBRZG6GM7YFJ47MG3W5XCNKURNN3",
+            "name": "hAccountB",
+            "user_jwt_expires_in_secs": 0,
+            "id": "2nyndTYyIf8dX3pzp2L4skpTIKh",
+            "is_system_account": false,
+            "is_scp_account": false
+        }
+    },
+    {
+        "sk_group_id": "2nyndS7QGtw0dbIw2zGwWYaq0sc",
+        "user_public_key": "UBF6RBT22UKJYJ3ZFRIT4I2FVP65P5G7GGBKQLH3Y2D6V7GIZCV6IA3N",
+        "created": "2024-11-04T12:24:20.915525Z",
+        "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJlZDI1NTE5LW5rZXkifQ.eyJqdGkiOiI0WVM1QkdDNUU1RU9URzVNVklNRkNNMkVEU1lSSllVWk1HRDREUjRHSFhUSUFVQUUzWEtBIiwiaWF0IjoxNzMwOTE5MzMzLCJpc3MiOiJBQ0xWTERWSlVCVUsyRzVKUUtLMklSUzNMUldPRU9BM0ZFTEJLVjYyT09QTzdXUE9KV0lYNVdMRCIsIm5hbWUiOiJDT05ORUNULUxFQUYyIiwic3ViIjoiVUJGNlJCVDIyVUtKWUozWkZSSVQ0STJGVlA2NVA1RzdHR0JLUUxIM1kyRDZWN0dJWkNWNklBM04iLCJuYXRzIjp7InB1YiI6e30sInN1YiI6e30sInN1YnMiOi0xLCJkYXRhIjotMSwicGF5bG9hZCI6LTEsImlzc3Vlcl9hY2NvdW50IjoiQUFUUUhVSTdISDRKRFpXM1BIWkdUM05MTkhPS0RCUlpHNkdNN1lGSjQ3TUczVzVYQ05LVVJOTjMiLCJ0eXBlIjoidXNlciIsInZlcnNpb24iOjJ9fQ.6UhupiBTiZ8NAhNK7ME-D6mXiXWnBk9LPgqLNMQzUpE6P3BiBPYM5ennaeNUHZ0bVBLtQOd3vUjz4clx2JEWAQ",
+        "team": {
+            "name": "Default",
+            "id": "2lt5YCgoCRFM4ohxFQkICD00UmJ"
+        },
+        "jwt_expires_at_max": -1,
+        "system": {
+            "jetstream_enabled": true,
+            "is_tenant": false,
+            "http_gateway_url": "",
+            "connection_type": "Direct",
+            "name": "C10_CP",
+            "server_urls": "nats://172.23.128.1:4211",
+            "user_jwt_expires_in_secs": 0,
+            "id": "2lt7DrYLEKVkq2KX5gIt5YlJXvv",
+            "state": "Disconnected"
+        },
+        "jwt_settings": {
+            "sub": {},
+            "data": -1,
+            "subs": -1,
+            "payload": -1,
+            "pub": {}
+        },
+        "claims": {
+            "sub": "UBF6RBT22UKJYJ3ZFRIT4I2FVP65P5G7GGBKQLH3Y2D6V7GIZCV6IA3N",
+            "nats": {
+                "sub": {},
+                "data": -1,
+                "subs": -1,
+                "payload": -1,
+                "issuer_account": "AATQHUI7HH4JDZW3PHZGT3NLNHOKDBRZG6GM7YFJ47MG3W5XCNKURNN3",
+                "pub": {},
+                "type": "user",
+                "version": 2
+            },
+            "iss": "ACLVLDVJUBUK2G5JQKK2IRS3LRWOEOA3FELBKV62OOPO7WPOJWIX5WLD",
+            "name": "CONNECT-LEAF2",
+            "iat": 1730919333,
+            "jti": "4YS5BGC5E5EOTG5MVIMFCM2EDSYRJYUZMGD4DR4GHXTIAUAE3XKA"
+        },
+        "name": "CONNECT-LEAF2",
+        "jwt_expires_in_secs": 0,
+        "id": "2oNvtJJ6IZ9LzQCxhDy72Bg1FIk",
+        "account": {
+            "account_public_key": "AATQHUI7HH4JDZW3PHZGT3NLNHOKDBRZG6GM7YFJ47MG3W5XCNKURNN3",
+            "name": "hAccountB",
+            "user_jwt_expires_in_secs": 0,
+            "id": "2nyndTYyIf8dX3pzp2L4skpTIKh",
+            "is_system_account": false,
+            "is_scp_account": false
+        }
+    },
+    {
+        "sk_group_id": "2nyndS7QGtw0dbIw2zGwWYaq0sc",
+        "user_public_key": "UDTMJYJKGPAXSDCLSM2GO7U6CU2SQNZ7ISOTKEZJR3CUPE7X4ATCFCBW",
+        "created": "2024-11-06T07:42:17.331872Z",
+        "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJlZDI1NTE5LW5rZXkifQ.eyJqdGkiOiJHWVJOUjJIVzREUzVJSVRBRlBGM0wzN01PVUtWSk0yNEU0RUw2VjNMSzRNVkJPSFNPQjJBIiwiaWF0IjoxNzMwODc4OTM3LCJpc3MiOiJBQ0xWTERWSlVCVUsyRzVKUUtLMklSUzNMUldPRU9BM0ZFTEJLVjYyT09QTzdXUE9KV0lYNVdMRCIsIm5hbWUiOiJDT05ORUNULUxFQUYzIiwic3ViIjoiVURUTUpZSktHUEFYU0RDTFNNMkdPN1U2Q1UyU1FOWjdJU09US0VaSlIzQ1VQRTdYNEFUQ0ZDQlciLCJuYXRzIjp7InB1YiI6e30sInN1YiI6e30sInN1YnMiOi0xLCJkYXRhIjotMSwicGF5bG9hZCI6LTEsImlzc3Vlcl9hY2NvdW50IjoiQUFUUUhVSTdISDRKRFpXM1BIWkdUM05MTkhPS0RCUlpHNkdNN1lGSjQ3TUczVzVYQ05LVVJOTjMiLCJ0eXBlIjoidXNlciIsInZlcnNpb24iOjJ9fQ.28ILC9iATTQtZcKc60S-t_YdlvE5VbK2gV1XYJdi97VhyTMFFRINO0GNbTQKm6Bl-PbfBh4cDAmPQlPqritFBw",
+        "team": {
+            "name": "Default",
+            "id": "2lt5YCgoCRFM4ohxFQkICD00UmJ"
+        },
+        "jwt_expires_at_max": -1,
+        "system": {
+            "jetstream_enabled": true,
+            "is_tenant": false,
+            "http_gateway_url": "",
+            "connection_type": "Direct",
+            "name": "C10_CP",
+            "server_urls": "nats://172.23.128.1:4211",
+            "user_jwt_expires_in_secs": 0,
+            "id": "2lt7DrYLEKVkq2KX5gIt5YlJXvv",
+            "state": "Disconnected"
+        },
+        "jwt_settings": {
+            "sub": {},
+            "data": -1,
+            "subs": -1,
+            "payload": -1,
+            "pub": {}
+        },
+        "claims": {
+            "sub": "UDTMJYJKGPAXSDCLSM2GO7U6CU2SQNZ7ISOTKEZJR3CUPE7X4ATCFCBW",
+            "nats": {
+                "sub": {},
+                "data": -1,
+                "subs": -1,
+                "payload": -1,
+                "issuer_account": "AATQHUI7HH4JDZW3PHZGT3NLNHOKDBRZG6GM7YFJ47MG3W5XCNKURNN3",
+                "pub": {},
+                "type": "user",
+                "version": 2
+            },
+            "iss": "ACLVLDVJUBUK2G5JQKK2IRS3LRWOEOA3FELBKV62OOPO7WPOJWIX5WLD",
+            "name": "CONNECT-LEAF3",
+            "iat": 1730878937,
+            "jti": "GYRNR2HW4DS5IITAFPF3L37MOUKVJM24E4EL6V3LK4MVBOHSOB2A"
+        },
+        "name": "CONNECT-LEAF3",
+        "jwt_expires_in_secs": 0,
+        "id": "2oT1pxhZD9XrxcqBsEhzOkeTvIm",
+        "account": {
+            "account_public_key": "AATQHUI7HH4JDZW3PHZGT3NLNHOKDBRZG6GM7YFJ47MG3W5XCNKURNN3",
+            "name": "hAccountB",
+            "user_jwt_expires_in_secs": 0,
+            "id": "2nyndTYyIf8dX3pzp2L4skpTIKh",
+            "is_system_account": false,
+            "is_scp_account": false
+        }
+    }
+]}

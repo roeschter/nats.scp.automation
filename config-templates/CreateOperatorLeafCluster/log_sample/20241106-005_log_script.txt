@@ -1,0 +1,120 @@
+export SCP_LOG=D:\private\nats.io_synadia\nats.scp.automation\log
+export SCP_URL=http://172.23.129.153:8080/api/core/beta/
+export SCP_BEARER=uat_xog9vXdCucTTB6XuSErcWlG4zCnbcj4b4U5smQrKz8GzjVxGHFjIsER9uoK0Ci5Q
+export SCP_LEAF_NAME=LEAF3
+export SCP_TEAM_NAME=Default
+export SCP_SYSTEM_NAME=C10_CP
+export SCP_TEMPLATES=..\config-templates\CreateOperatorLeafCluster\
+export SCP_OUTPUT=..\config-templates\CreateOperatorLeafCluster\LEAF3
+export SCP_HUB_ACCOUNTS=hAccountA,hAccountB
+export SCP_LEAF_ACCOUNTS=lAccountA,lAccountB
+export SCP_PORTS=4301,4302,4303
+export SCP_ROUTEPORTS=7711,7712,7713
+export SCP_SERVER_NAMES=NODE1,NODE2,NODE3
+# DONE INITIALIZING - Set Env variables above to configure
+# Find the team
+# Request: 1
+curl -X GET 'http://172.23.129.153:8080/api/core/beta/teams'
+# Response Code: 200
+# Extracting: 20241106-005-R-1-Result-teams.json#/items/name=Default#id
+export SCP_TEAM=2lt5YCgoCRFM4ohxFQkICD00UmJ
+# Find or create new leaf system and extract operator and accounts.
+# Request: 2
+curl -X GET 'http://172.23.129.153:8080/api/core/beta/teams/2lt5YCgoCRFM4ohxFQkICD00UmJ/systems'
+# Response Code: 200
+# LEAF3: System not found - Creating new System
+export URL=nats://172.23.128.1:4301
+export NAME=LEAF3
+# Using template: ..\config-templates\CreateOperatorLeafCluster\create_system_template.json
+# Request: 3
+curl -X POST 'http://172.23.129.153:8080/api/core/beta/teams/2lt5YCgoCRFM4ohxFQkICD00UmJ/systems'
+# Response Code: 201
+# Extracting: 20241106-005-R-3-Result-teams-2lt5YCgoCRFM4ohxFQkICD00UmJ-systems.json#id
+export SCP_SYSTEM=2oUOilE60o0NbAgYT1FLDbGfElr
+# Extracting: 20241106-005-R-3-Result-teams-2lt5YCgoCRFM4ohxFQkICD00UmJ-systems.json#system_account_jwt
+export system_account_jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJlZDI1NTE5LW5rZXkifQ.eyJqdGkiOiJIREU1N0RCM1lPNk9ZWUczMldZUVFCSEUySFpPQTJVRUgyQ1Q3VkY1TDZIRDZUVUdTRlpBIiwiaWF0IjoxNzMwOTIwODE2LCJpc3MiOiJPRDZGVTNNT0dJSUxVQk5TSVVJNlE3M0NZSUEyU0U2WkZYUUdQM01YNElZR1BVTVVVUkxMWExRUSIsIm5hbWUiOiJTWVMiLCJzdWIiOiJBQk5ZVTI1MlFXVEdVNTdKWk1KSzU1VkJEVllaQ09WQjVKSkNTVURIWU1TVklDUFNRUzVMRVEzUiIsIm5hdHMiOnsiYXV0aG9yaXphdGlvbiI6e30sImRlZmF1bHRfcGVybWlzc2lvbnMiOnsicHViIjp7fSwic3ViIjp7fX0sImxpbWl0cyI6eyJjb25uIjotMSwiZGF0YSI6LTEsImV4cG9ydHMiOi0xLCJpbXBvcnRzIjotMSwibGVhZiI6LTEsInBheWxvYWQiOi0xLCJzdWJzIjotMSwid2lsZGNhcmRzIjp0cnVlfSwic2NwIjp7InN5c3RlbV9pZCI6IjJvVU9pbEU2MG8wTmJBZ1lUMUZMRGJHZkVsciIsImFjY291bnRfaWQiOiIyb1VPaWpKbGpNcE1Pem9IMFpRaFF3d2ZMUTMifSwic2lnbmluZ19rZXlzIjpbIkFCS1Y1R0ZTTkdISUY1QTZTNTNTQlBXV01DNUdIWDZXM1lPS0hUTjVXRUI1REpZT05HSzNBVkxZIiwiQUNMWk9XT1ZBNUZCV1lZVENBWDRHN05aREJDVTJMS0NPVEJPWFNNVEpZSDRNWjdOWVRTWExBQlEiXSwidHlwZSI6ImFjY291bnQiLCJ2ZXJzaW9uIjoyfX0.Xw-YEMKXN-I7EYHGCRcER30gdY0ra5808zr-KN0QDXpuSRqyRjOWlZyuQE1mxbIjaC0Ir3Lc_KaM1gr61THzBQ
+# Extracting: 20241106-005-R-3-Result-teams-2lt5YCgoCRFM4ohxFQkICD00UmJ-systems.json#operator_jwt
+export operator_jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJlZDI1NTE5LW5rZXkifQ.eyJqdGkiOiJNQ1I2VVZJVFpFV0k3WjROWTRHU1NDNEZPNEQ1Qk1USDJNTFY2UkY2UE83UEQ3Skg3TENRIiwiaWF0IjoxNzMwOTIwODE2LCJpc3MiOiJPQzROQ01IWVJGUUdaWTU3V0taQkNOMzc1MkNORVVQWkY2WVlDSjJMWUFaNjI1QUFFTEVSWDIzUSIsIm5hbWUiOiJMRUFGMyIsInN1YiI6Ik9DNE5DTUhZUkZRR1pZNTdXS1pCQ04zNzUyQ05FVVBaRjZZWUNKMkxZQVo2MjVBQUVMRVJYMjNRIiwibmF0cyI6eyJzaWduaW5nX2tleXMiOlsiT0Q2RlUzTU9HSUlMVUJOU0lVSTZRNzNDWUlBMlNFNlpGWFFHUDNNWDRJWUdQVU1VVVJMTFhMUVEiXSwib3BlcmF0b3Jfc2VydmljZV91cmxzIjpbIm5hdHM6Ly8xNzIuMjMuMTI4LjE6NDMwMSJdLCJzeXN0ZW1fYWNjb3VudCI6IkFCTllVMjUyUVdUR1U1N0paTUpLNTVWQkRWWVpDT1ZCNUpKQ1NVREhZTVNWSUNQU1FTNUxFUTNSIiwidHlwZSI6Im9wZXJhdG9yIiwidmVyc2lvbiI6Mn19.6WohjBsoN7_wq-b09_qYGGTWXmo1wdQztxnkBL0OsCXm1HqwGLlc6BQNHGK99MgT1V4F7-vmLQJ7qcf54s4EDA
+# Extracting: 20241106-005-R-3-Result-teams-2lt5YCgoCRFM4ohxFQkICD00UmJ-systems.json#operator_claims/nats/system_account
+export system_account_key=ABNYU252QWTGU57JZMJK55VBDVYZCOVB5JJCSUDHYMSVICPSQS5LEQ3R
+# Find or create users on hub system in account to be linked to remote system
+# Extracting: 20241106-005-R-2-Result-teams-2lt5YCgoCRFM4ohxFQkICD00UmJ-systems.json#/items/name=C10_CP#id
+# Request: 4
+curl -X GET 'http://172.23.129.153:8080/api/core/beta/systems/2lt7DrYLEKVkq2KX5gIt5YlJXvv/accounts'
+# Response Code: 200
+# Extracting: 20241106-005-R-4-Result-systems-2lt7DrYLEKVkq2KX5gIt5YlJXvv-accounts.json#/items/name=hAccountA#id
+export SCP_ACCOUNT=2nyncUHVALCJnaKM2QASZsEXdJM
+# Request: 5
+curl -X GET 'http://172.23.129.153:8080/api/core/beta/accounts/2nyncUHVALCJnaKM2QASZsEXdJM/nats-users'
+# Response Code: 200
+# Extracting: 20241106-005-R-5-Result-accounts-2nyncUHVALCJnaKM2QASZsEXdJM-nats-users.json#/items/name=CONNECT-LEAF3#id
+export SCP_USER=2oT1pyGfmE8mLpSIXtmGPGabIiG
+# Export credentials
+# Request: 6
+curl -X POST 'http://172.23.129.153:8080/api/core/beta/nats-users/2oT1pyGfmE8mLpSIXtmGPGabIiG/creds'
+# Response Code: 200
+# Extracting: 20241106-005-R-4-Result-systems-2lt7DrYLEKVkq2KX5gIt5YlJXvv-accounts.json#/items/name=hAccountB#id
+export SCP_ACCOUNT=2nyndTYyIf8dX3pzp2L4skpTIKh
+# Request: 7
+curl -X GET 'http://172.23.129.153:8080/api/core/beta/accounts/2nyndTYyIf8dX3pzp2L4skpTIKh/nats-users'
+# Response Code: 200
+# Extracting: 20241106-005-R-7-Result-accounts-2nyndTYyIf8dX3pzp2L4skpTIKh-nats-users.json#/items/name=CONNECT-LEAF3#id
+export SCP_USER=2oT1pxhZD9XrxcqBsEhzOkeTvIm
+# Export credentials
+# Request: 8
+curl -X POST 'http://172.23.129.153:8080/api/core/beta/nats-users/2oT1pxhZD9XrxcqBsEhzOkeTvIm/creds'
+# Response Code: 200
+# Find or create accounts on leaf system
+# Request: 9
+curl -X GET 'http://172.23.129.153:8080/api/core/beta/systems/2oUOilE60o0NbAgYT1FLDbGfElr/accounts'
+# Response Code: 200
+export NAME=lAccountA
+# Using template: ..\config-templates\CreateOperatorLeafCluster\create_account_template.json
+# Request: 10
+curl -X POST 'http://172.23.129.153:8080/api/core/beta/systems/2oUOilE60o0NbAgYT1FLDbGfElr/accounts'
+# Response Code: 201
+# Extracting: 20241106-005-R-10-Result-systems-2oUOilE60o0NbAgYT1FLDbGfElr-accounts.json#account_public_key
+# Extracting: 20241106-005-R-10-Result-systems-2oUOilE60o0NbAgYT1FLDbGfElr-accounts.json#jwt
+export ACCOUNT=AD43ZOLRNPUZQA2MIJLVZUN7TGUN5UOS5NTJS7ZTQDJHZN42Y4HV4JVL
+export CREDS=hAccountA-CONNECT-LEAF3.creds
+# Using template: ..\config-templates\CreateOperatorLeafCluster\remotes_template.conf
+export NAME=lAccountB
+# Using template: ..\config-templates\CreateOperatorLeafCluster\create_account_template.json
+# Request: 11
+curl -X POST 'http://172.23.129.153:8080/api/core/beta/systems/2oUOilE60o0NbAgYT1FLDbGfElr/accounts'
+# Response Code: 201
+# Extracting: 20241106-005-R-11-Result-systems-2oUOilE60o0NbAgYT1FLDbGfElr-accounts.json#account_public_key
+# Extracting: 20241106-005-R-11-Result-systems-2oUOilE60o0NbAgYT1FLDbGfElr-accounts.json#jwt
+export ACCOUNT=AAQGJ3YG6TAGSO6ZCZVHTIGPZQPCJQAXPFLJNT7B7FZKL4YJK4GIDUU4
+export CREDS=hAccountB-CONNECT-LEAF3.creds
+# Using template: ..\config-templates\CreateOperatorLeafCluster\remotes_template.conf
+export PRELOAD=AD43ZOLRNPUZQA2MIJLVZUN7TGUN5UOS5NTJS7ZTQDJHZN42Y4HV4JVL: eyJ0eXAiOiJKV1QiLCJhbGciOiJlZDI1NTE5LW5rZXkifQ.eyJqdGkiOiJBNUxJUVZJRU42S1FWUFBEQjNRUkRXNVBWRjdBVkJWRUVYUFNMRjJaQkxJNkJEQkZSTzdRIiwiaWF0IjoxNzMwOTIwODE2LCJpc3MiOiJPRDZGVTNNT0dJSUxVQk5TSVVJNlE3M0NZSUEyU0U2WkZYUUdQM01YNElZR1BVTVVVUkxMWExRUSIsIm5hbWUiOiJsQWNjb3VudEEiLCJzdWIiOiJBRDQzWk9MUk5QVVpRQTJNSUpMVlpVTjdUR1VONVVPUzVOVEpTN1pUUURKSFpONDJZNEhWNEpWTCIsIm5hdHMiOnsiYXV0aG9yaXphdGlvbiI6e30sImRlZmF1bHRfcGVybWlzc2lvbnMiOnsicHViIjp7fSwic3ViIjp7fX0sImRlc2NyaXB0aW9uIjoiTm9uZSIsImltcG9ydHMiOlt7ImFjY291bnQiOiJBQVpOQjY2VUtUR0xLSEJXV0JJT1RQVUdJWU0yVE9KUUVCTjQzNU9UV1k1VlYzUlJWTzcyMzJNUiIsImxvY2FsX3N1YmplY3QiOiIkc2NwLm1ldHJpY3MuKiIsIm5hbWUiOiJbTWFuYWdlZCBJbXBvcnRdIFNlcnZpY2UgTWV0cmljcyBJbXBvcnQiLCJzdWJqZWN0IjoiJHNjcC5tZXRyaWNzLkFDQy5BRDQzWk9MUk5QVVpRQTJNSUpMVlpVTjdUR1VONVVPUzVOVEpTN1pUUURKSFpONDJZNEhWNEpWTC4qIiwidHlwZSI6InNlcnZpY2UifSx7ImFjY291bnQiOiJBQVpOQjY2VUtUR0xLSEJXV0JJT1RQVUdJWU0yVE9KUUVCTjQzNU9UV1k1VlYzUlJWTzcyMzJNUiIsImxvY2FsX3N1YmplY3QiOiIkSlMuRVZFTlQuKi5cdTAwM2UiLCJuYW1lIjoiW01hbmFnZWQgSW1wb3J0XSBKUyBtZXRyaWNzIiwic3ViamVjdCI6IiRKUy5FVkVOVC4qLkFDQy5BRDQzWk9MUk5QVVpRQTJNSUpMVlpVTjdUR1VONVVPUzVOVEpTN1pUUURKSFpONDJZNEhWNEpWTC5cdTAwM2UiLCJ0eXBlIjoic2VydmljZSJ9XSwibGltaXRzIjp7ImNvbm4iOi0xLCJkYXRhIjotMSwiZXhwb3J0cyI6LTEsImltcG9ydHMiOi0xLCJsZWFmIjotMSwicGF5bG9hZCI6LTEsInN1YnMiOi0xLCJ3aWxkY2FyZHMiOnRydWV9LCJzY3AiOnsic3lzdGVtX2lkIjoiMm9VT2lsRTYwbzBOYkFnWVQxRkxEYkdmRWxyIiwiYWNjb3VudF9pZCI6IjJvVU9pa2h0ZTIyNVdNWWJBeEpQbHdjRGFVdCJ9LCJzaWduaW5nX2tleXMiOlsiQUJJUFJWQzdMNExaWEc3S05ZVTI2TUozS1VXSURGR0hOWDNJQzJaM1NJVTRHN1lDUEFFVllDUVkiLCJBRERJNFVXVUREWkRBSERSTlRPTExJTE1LRjYzTFJBV1FEUUo3SFJZVkxRTEJWSzNYVkFJRzRIWCJdLCJ0eXBlIjoiYWNjb3VudCIsInZlcnNpb24iOjJ9fQ.Bg_OHTUVV5OM51uZRJmJGnxuOzzWwV8TDe4NqJb9fUq71wRBoAD3mC14fu2YxZhCOMw81SsMyBX52-8KR5noAA
+AAQGJ3YG6TAGSO6ZCZVHTIGPZQPCJQAXPFLJNT7B7FZKL4YJK4GIDUU4: eyJ0eXAiOiJKV1QiLCJhbGciOiJlZDI1NTE5LW5rZXkifQ.eyJqdGkiOiI1WFpZRUE2TUZKUk1aVEpQTVYzWDJFV01IWk9QUjc1RkxNRUFGTlNXVlFUVUlZT1BGTktRIiwiaWF0IjoxNzMwOTIwODE2LCJpc3MiOiJPRDZGVTNNT0dJSUxVQk5TSVVJNlE3M0NZSUEyU0U2WkZYUUdQM01YNElZR1BVTVVVUkxMWExRUSIsIm5hbWUiOiJsQWNjb3VudEIiLCJzdWIiOiJBQVFHSjNZRzZUQUdTTzZaQ1pWSFRJR1BaUVBDSlFBWFBGTEpOVDdCN0ZaS0w0WUpLNEdJRFVVNCIsIm5hdHMiOnsiYXV0aG9yaXphdGlvbiI6e30sImRlZmF1bHRfcGVybWlzc2lvbnMiOnsicHViIjp7fSwic3ViIjp7fX0sImRlc2NyaXB0aW9uIjoiTm9uZSIsImltcG9ydHMiOlt7ImFjY291bnQiOiJBQVpOQjY2VUtUR0xLSEJXV0JJT1RQVUdJWU0yVE9KUUVCTjQzNU9UV1k1VlYzUlJWTzcyMzJNUiIsImxvY2FsX3N1YmplY3QiOiIkc2NwLm1ldHJpY3MuKiIsIm5hbWUiOiJbTWFuYWdlZCBJbXBvcnRdIFNlcnZpY2UgTWV0cmljcyBJbXBvcnQiLCJzdWJqZWN0IjoiJHNjcC5tZXRyaWNzLkFDQy5BQVFHSjNZRzZUQUdTTzZaQ1pWSFRJR1BaUVBDSlFBWFBGTEpOVDdCN0ZaS0w0WUpLNEdJRFVVNC4qIiwidHlwZSI6InNlcnZpY2UifSx7ImFjY291bnQiOiJBQVpOQjY2VUtUR0xLSEJXV0JJT1RQVUdJWU0yVE9KUUVCTjQzNU9UV1k1VlYzUlJWTzcyMzJNUiIsImxvY2FsX3N1YmplY3QiOiIkSlMuRVZFTlQuKi5cdTAwM2UiLCJuYW1lIjoiW01hbmFnZWQgSW1wb3J0XSBKUyBtZXRyaWNzIiwic3ViamVjdCI6IiRKUy5FVkVOVC4qLkFDQy5BQVFHSjNZRzZUQUdTTzZaQ1pWSFRJR1BaUVBDSlFBWFBGTEpOVDdCN0ZaS0w0WUpLNEdJRFVVNC5cdTAwM2UiLCJ0eXBlIjoic2VydmljZSJ9XSwibGltaXRzIjp7ImNvbm4iOi0xLCJkYXRhIjotMSwiZXhwb3J0cyI6LTEsImltcG9ydHMiOi0xLCJsZWFmIjotMSwicGF5bG9hZCI6LTEsInN1YnMiOi0xLCJ3aWxkY2FyZHMiOnRydWV9LCJzY3AiOnsic3lzdGVtX2lkIjoiMm9VT2lsRTYwbzBOYkFnWVQxRkxEYkdmRWxyIiwiYWNjb3VudF9pZCI6IjJvVU9pbGcwSkV6N3B6QUNMUm5FNkdidHRleCJ9LCJzaWduaW5nX2tleXMiOlsiQUFaUUI0RFFCSjdaRkhDSUlFTDJSN0U1WTZCSTMzTjRYNjZRNTRINExWWE1FRU03RUdRUTRBTDIiLCJBQ1BUNVlKU1FLQ1FZSlRYNk0zNllOS0hCRURDU0xWTEhLVUE3TUpXSDJPR1pZWFU3WkZaQU5NViJdLCJ0eXBlIjoiYWNjb3VudCIsInZlcnNpb24iOjJ9fQ.uRV94Uug8la_yxF_5jBeVoFo97r6R8YCs4DUEa4TLFRR7eyrY1EXvlZBfaUarywESF3oRh_LpHB-xnEt-6GqDQ
+
+export REMOTES=        {
+          url: "nats-leaf://127.0.0.1:8421"
+          credentials: "hAccountA-CONNECT-LEAF3.creds"
+          account: AD43ZOLRNPUZQA2MIJLVZUN7TGUN5UOS5NTJS7ZTQDJHZN42Y4HV4JVL
+        },
+        {
+          url: "nats-leaf://127.0.0.1:8421"
+          credentials: "hAccountB-CONNECT-LEAF3.creds"
+          account: AAQGJ3YG6TAGSO6ZCZVHTIGPZQPCJQAXPFLJNT7B7FZKL4YJK4GIDUU4
+        },
+
+# Create leaf config from template for each server
+export SERVER_NAME=NODE1
+export CLUSTER=LEAF3
+export PORT=4301
+export RPORT=7711
+# Using template: ..\config-templates\CreateOperatorLeafCluster\leaf_template.conf
+export SERVER_NAME=NODE2
+export CLUSTER=LEAF3
+export PORT=4302
+export RPORT=7712
+# Using template: ..\config-templates\CreateOperatorLeafCluster\leaf_template.conf
+export SERVER_NAME=NODE3
+export CLUSTER=LEAF3
+export PORT=4303
+export RPORT=7713
+# Using template: ..\config-templates\CreateOperatorLeafCluster\leaf_template.conf

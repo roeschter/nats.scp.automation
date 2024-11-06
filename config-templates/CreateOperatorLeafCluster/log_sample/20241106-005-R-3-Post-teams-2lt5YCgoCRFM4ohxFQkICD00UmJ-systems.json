@@ -1,0 +1,11 @@
+{
+    "jetstream_enabled": true,
+    "connection_type": "Direct",
+    "name": "LEAF3",
+    "jetstream_domain": "LEAF3",
+    "url": "nats://172.23.128.1:4301",
+    "direct_connection_opts": {
+        "tls_mode": "Auto",
+        "tls_insecure_skip_verify": false
+    }
+}
