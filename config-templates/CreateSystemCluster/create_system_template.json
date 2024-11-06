@@ -1,0 +1,11 @@
+{
+  "connection_type": "Direct",
+  "direct_connection_opts": {
+    "tls_insecure_skip_verify": false,
+    "tls_mode": "Auto"
+  },
+  "jetstream_domain": "$NAME",
+  "jetstream_enabled": true,
+  "name": "$NAME",
+  "url": "$URL"
+}

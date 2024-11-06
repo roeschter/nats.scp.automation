@@ -1,0 +1,14 @@
+export SCP_LOG=.
+export SCP_URL=URL to the SCP REST API - e.g. http://172.23.129.153:8080/api/core/beta/
+export SCP_BEARER=uat_xog9vXdCucTTB6XuSErcWlG4zCnbcj4b4U5smQrKz8GzjVxGHFjIsER9uoK0Ci5Q
+export SCP_LEAF_NAME=LEAF2
+export SCP_TEAM_NAME=Default
+export SCP_SYSTEM_NAME=C10_CP
+export SCP_TEMPLATES=D:\synadia\software\samples\scp_automation\
+export SCP_OUTPUT=D:\synadia\software\samples\scp_automation\LEAF2
+export SCP_HUB_ACCOUNTS=hAccountA,hAccountB
+export SCP_LEAF_ACCOUNTS=lAccountA,lAccountB
+export SCP_PORTS=4301,4302,4303
+export SCP_ROUTEPORTS=7711,7712,7713
+# DONE INITIALIZING - Set Env variables above to configure
+# Find the team

@@ -1,0 +1,39 @@
+{
+  "jwt_settings": {
+    "description": "None",
+    "info_url": "",
+    "authorization": {
+      "allowed_accounts": [
+      ],
+      "auth_users": [  
+      ],
+      "xkey": ""
+    },
+    "limits": {
+      "data": 0,
+      "payload": 0,
+      "subs": 0,
+      "conn": 0,
+      "disallow_bearer": false,
+      "exports": 0,
+      "imports": 0,
+      "leaf": 0,
+      "wildcards": false,
+      "consumer": 0,
+      "disk_max_stream_bytes": 0,
+      "disk_storage": 0,
+      "max_ack_pending": 0,
+      "max_bytes_required": false,
+      "mem_max_stream_bytes": 0,
+      "mem_storage": 0,
+      "streams": 0,
+      "tiered_limits": {}
+    },
+    "mappings": {},
+    "revocations": {},
+    "tags": [
+    ]
+  },
+  "name": "$NAME",
+  "user_jwt_expires_in_secs": 100000000
+}

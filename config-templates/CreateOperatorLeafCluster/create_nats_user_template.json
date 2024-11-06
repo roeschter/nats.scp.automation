@@ -1,0 +1,16 @@
+{
+  "jwt_expires_in_secs": 0,
+  "jwt_settings": {
+    "pub": {
+    },
+    "sub": {
+    },
+    "times_location": "",
+    "data": -1,
+    "payload": -1,
+    "subs": -1,
+    "bearer_token": false
+  },
+  "name": "$NAME",
+  "sk_group_id": "$SKSID"
+}
