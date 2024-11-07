@@ -1,0 +1,57 @@
+export SCP_LOG=D:\private\nats.io_synadia\nats.scp.automation\log
+export SCP_URL=http://172.23.129.153:8080/api/core/beta/
+export SCP_BEARER=uat_mOywaPDfEgNUrd1eRqpxXo34LmRASe8Ze5mcBHV6rkRBUzEg9Vn1gf9k5xhUEZ04
+export SCP_TEAM_NAME=Default
+export SCP_SYSTEM_NAME=CLUSTER01
+export SCP_TEMPLATES=..\config-templates\CreateSystemCluster\
+export SCP_OUTPUT=..\config-templates\CreateSystemCluster\CLUSTER01
+export SCP_PORTS=9101, 9102, 9103
+export SCP_ROUTEPORTS=9111, 9112, 9113
+export SCP_SERVER_NAMES=NODE1, NODE2, NODE3
+export SERVER_HOST_NAMES=172.23.128.1, 172.23.128.1, 172.23.128.1
+# DONE INITIALIZING - Set Env variables above to configure
+# Find the named team
+# Request: 1
+curl -X GET 'http://172.23.129.153:8080/api/core/beta/teams'
+# Response Code: 200
+# Extracting: 20241107-006-R-1-Result-teams.json#/items/name=Default#id
+export SCP_TEAM=2oWHOv4dlp5n6rxU97bQjD99ZfJ
+# Find or create system
+# Request: 2
+curl -X GET 'http://172.23.129.153:8080/api/core/beta/teams/2oWHOv4dlp5n6rxU97bQjD99ZfJ/systems'
+# Response Code: 200
+# CLUSTER01: System not found - Creating new System
+export URL=nats://172.23.128.1:9101,nats://172.23.128.1:9102,nats://172.23.128.1:9103
+export NAME=CLUSTER01
+# Using template: ..\config-templates\CreateSystemCluster\create_system_template.json
+# Request: 3
+curl -X POST 'http://172.23.129.153:8080/api/core/beta/teams/2oWHOv4dlp5n6rxU97bQjD99ZfJ/systems'
+# Response Code: 201
+# Extracting: 20241107-006-R-3-Result-teams-2oWHOv4dlp5n6rxU97bQjD99ZfJ-systems.json#id
+export SCP_SYSTEM=2oWOabhqgy8KRHCWh2y1LoyoOBf
+# Extracting: 20241107-006-R-3-Result-teams-2oWHOv4dlp5n6rxU97bQjD99ZfJ-systems.json#system_account_jwt
+export system_account_jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJlZDI1NTE5LW5rZXkifQ.eyJqdGkiOiJGTEdPSE1ISU80NDNXM1c2WVhJVklZRlhUSzZIU0JRTllFRllGSUZWSk5MNFVZSklGRlNBIiwiaWF0IjoxNzMwOTgxOTI5LCJpc3MiOiJPQVdZN0NLV0tMNk9RQTJIQlZXSTNaUENVNkdEUE9ZU1JNWUlMVEw0RVJWM0NVMzNJTEZCUFJZTSIsIm5hbWUiOiJTWVMiLCJzdWIiOiJBQ0hSRlhPSEJRUURKU1FMVlJISDJZVTZOSFJGWVUyRUE3TTVVMzNDWDZXRVFHNktINzdKSE9XMyIsIm5hdHMiOnsiYXV0aG9yaXphdGlvbiI6e30sImRlZmF1bHRfcGVybWlzc2lvbnMiOnsicHViIjp7fSwic3ViIjp7fX0sImxpbWl0cyI6eyJjb25uIjotMSwiZGF0YSI6LTEsImV4cG9ydHMiOi0xLCJpbXBvcnRzIjotMSwibGVhZiI6LTEsInBheWxvYWQiOi0xLCJzdWJzIjotMSwid2lsZGNhcmRzIjp0cnVlfSwic2NwIjp7InN5c3RlbV9pZCI6IjJvV09hYmhxZ3k4S1JIQ1doMnkxTG95b09CZiIsImFjY291bnRfaWQiOiIyb1dPYWR1UFVmM3VtcjlpeW9seWdQbnJOd1MifSwic2lnbmluZ19rZXlzIjpbIkFBNEFUNjZKUzYzRzJYNFFPVDZBTTZVVFNCUzNBVFVKTFEzV0hWTFZDV0FFT0xYUkJEQUNJS0pPIiwiQUNEWFVOWk82Q0QzT1BPWlQzNlZFQjNCSUNCM0Y2S1NWQVhHSEVEVlVINU40NUpCTVFEM0hKNzciXSwidHlwZSI6ImFjY291bnQiLCJ2ZXJzaW9uIjoyfX0.9IyBtDRNI-x4lMxtwVlPFRiCpRSTUkV5lBq-1CL73PhKHe9kXjrvCoYXsnUPc4wfKBrv-gSygX-GvP0hAwKQBA
+# Extracting: 20241107-006-R-3-Result-teams-2oWHOv4dlp5n6rxU97bQjD99ZfJ-systems.json#operator_jwt
+export operator_jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJlZDI1NTE5LW5rZXkifQ.eyJqdGkiOiJMRlJPSFRIUTM2NE1FT1lMTVNEM0JCUkNBTjJVUFZIUUVDN09HVUhMTFFHMk5KQ0RaT1FRIiwiaWF0IjoxNzMwOTgxOTI5LCJpc3MiOiJPQUdRQ0pKRkxISTczQ0pMSVRYVllCQlpSS0E0QlVMTURJWDRKSVY3WU5TSVpLTERIQTZMV0RVSyIsIm5hbWUiOiJDTFVTVEVSMDEiLCJzdWIiOiJPQUdRQ0pKRkxISTczQ0pMSVRYVllCQlpSS0E0QlVMTURJWDRKSVY3WU5TSVpLTERIQTZMV0RVSyIsIm5hdHMiOnsic2lnbmluZ19rZXlzIjpbIk9BV1k3Q0tXS0w2T1FBMkhCVldJM1pQQ1U2R0RQT1lTUk1ZSUxUTDRFUlYzQ1UzM0lMRkJQUllNIl0sIm9wZXJhdG9yX3NlcnZpY2VfdXJscyI6WyJuYXRzOi8vMTcyLjIzLjEyOC4xOjkxMDEsbmF0czovLzE3Mi4yMy4xMjguMTo5MTAyLG5hdHM6Ly8xNzIuMjMuMTI4LjE6OTEwMyJdLCJzeXN0ZW1fYWNjb3VudCI6IkFDSFJGWE9IQlFRREpTUUxWUkhIMllVNk5IUkZZVTJFQTdNNVUzM0NYNldFUUc2S0g3N0pIT1czIiwidHlwZSI6Im9wZXJhdG9yIiwidmVyc2lvbiI6Mn19.hrwcPV1QRER5AGBCxxyHNRIcP2KpOvvlB7KJoIaZ7mKZSBDCXiDjkRNQgltlfSaEY9XypF6OWmeKADjGhhh1Dg
+# Extracting: 20241107-006-R-3-Result-teams-2oWHOv4dlp5n6rxU97bQjD99ZfJ-systems.json#operator_claims/nats/system_account
+export system_account_key=ACHRFXOHBQQDJSQLVRHH2YU6NHRFYU2EA7M5U33CX6WEQG6KH77JHOW3
+# Create leaf config from template for each server
+export ROUTES=nats://172.23.128.1:9111,nats://172.23.128.1:9112,nats://172.23.128.1:9113
+export SERVER_NAME=NODE1
+export SERVER_HOST_NAME=172.23.128.1
+export CLUSTER=CLUSTER01
+export PORT=9101
+export RPORT=9111
+# Using template: ..\config-templates\CreateSystemCluster\node_template.conf
+export SERVER_NAME=NODE2
+export SERVER_HOST_NAME=172.23.128.1
+export CLUSTER=CLUSTER01
+export PORT=9102
+export RPORT=9112
+# Using template: ..\config-templates\CreateSystemCluster\node_template.conf
+export SERVER_NAME=NODE3
+export SERVER_HOST_NAME=172.23.128.1
+export CLUSTER=CLUSTER01
+export PORT=9103
+export RPORT=9113
+# Using template: ..\config-templates\CreateSystemCluster\node_template.conf

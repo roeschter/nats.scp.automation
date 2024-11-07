@@ -1,2 +1,5 @@
 
 /log
+/config-templates/CreateSystemCluster/CLUSTER01/js
+/config-templates/CreateSystemCluster/CLUSTER01/jwt
+*.bat

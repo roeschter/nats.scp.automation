@@ -22,6 +22,7 @@ public class CreateOperatorLeafCluster {
 
 		api.env(SCP_TEMPLATES, "..\\config-templates\\CreateOperatorLeafCluster\\");
 		api.env(SCP_OUTPUT,  api.env(SCP_TEMPLATES) + api.env("SCP_LEAF_NAME") );
+		api.env("SCP_CLUSTER_URL", "nats://172.23.128.1:4301" );
 
 		//List of account to link - hub and leaf
 		String[] hubAccounts = api.envList("SCP_HUB_ACCOUNTS", "hAccountA,hAccountB");
@@ -51,7 +52,7 @@ public class CreateOperatorLeafCluster {
 		if ( !system.hasData) {
 			//Create System if not exists
 			api.logComment( api.env("SCP_LEAF_NAME") +": System not found - Creating new System" );
-			api.envSet("URL", "nats://172.23.128.1:4301" );
+			api.envSet("URL", api.env("SCP_CLUSTER_URL" ) );
 			api.envSet("NAME", api.env("SCP_LEAF_NAME") );
 			system = api.createSystem( api.env(SCP_TEAM), "create_system_template.json");
 		}

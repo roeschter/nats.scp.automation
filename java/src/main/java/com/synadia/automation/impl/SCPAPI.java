@@ -259,11 +259,21 @@ public class SCPAPI implements Logger {
 	}
 
 
-
 	public int envInt( String var, String default_ )
 	{
 		return Integer.parseInt(env(var, default_));
 	}
+
+	public String buildClusterURL( String[] serverHost, String[] port )
+	{
+		StringBuilder url = new StringBuilder();
+		for ( int i=0; i<serverHost.length; i++) {
+			if ( i!=0 ) url.append(",");
+			url.append("nats://").append(serverHost[i]).append(":").append(port[i]);
+		}
+		return url.toString();
+	}
+
 
 	// COMMAND wrappers ---------------------------------------------------------------
 
