@@ -12,13 +12,14 @@ This is work in progress. Examples are designed to exmeplify SCP REST API usage 
 ## How to run
 
 * See \java\src\main\java\com\synadia\automation for all examples
+* All configuration is through environment variables - Check source or run and inspect log output
 * To run an example go to the /java folder
     * Set SCP_LOG to you log location - default is `./`
     * Set SCP_URL to your SCP API URL  e.g. `http://172.23.129.153:8080/api/core/beta/`
     * set SCP_BEARER to you SCP access token e.g. `uat_mOywaPDfEgNUrd1eRqpxXo34LmRASe8Ze5mcBHV6rkRBUzEg9Vn1gf9k5xhUEZ04`
     * run "java  com.synadia.automation.CreateSystemCluster"
-* All configuration is through environment variables - Check source or run and inspect log output
-* SCP_LOG sets the log directory ( default is '.')
+
+If you want to skip the build proces you will find a prepackaged jar with dependencies in the /java folder named - `1-0.0.1-SNAPSHOT.jar` or similar.
 
 ## Current examples
 
