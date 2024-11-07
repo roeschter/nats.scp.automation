@@ -1,0 +1,58 @@
+export SCP_LOG=D:\private\nats.io_synadia\nats.scp.automation\log
+export SCP_URL=http://172.23.129.153:8080/api/core/beta/
+export SCP_BEARER=uat_mOywaPDfEgNUrd1eRqpxXo34LmRASe8Ze5mcBHV6rkRBUzEg9Vn1gf9k5xhUEZ04
+export SCP_TEAM_NAME=Default
+export SCP_SYSTEM_NAME=CLUSTER01
+export SCP_ACCOUNT_NAME=ACME
+export SCP_USER_NAME=ACME-USER
+export SCP_TEMPLATES=..\config-templates\CreateAccountUserCreds\
+export SCP_OUTPUT=..\config-templates\CreateAccountUserCreds\CLUSTER01
+# DONE INITIALIZING - Set Env variables above to configure
+# Find the named team
+# Request: 1
+curl -X GET 'http://172.23.129.153:8080/api/core/beta/teams'
+# Response Code: 200
+# Extracting: 20241107-001-R-1-Result-teams.json#/items/name=Default#id
+export SCP_TEAM=2oWHOv4dlp5n6rxU97bQjD99ZfJ
+# Find the named system
+# Request: 2
+curl -X GET 'http://172.23.129.153:8080/api/core/beta/teams/2oWHOv4dlp5n6rxU97bQjD99ZfJ/systems'
+# Response Code: 200
+# Extracting: 20241107-001-R-2-Result-teams-2oWHOv4dlp5n6rxU97bQjD99ZfJ-systems.json#/items/name=CLUSTER01#id
+export SCP_SYSTEM=2oWOabhqgy8KRHCWh2y1LoyoOBf
+# Find or create account
+# Request: 3
+curl -X GET 'http://172.23.129.153:8080/api/core/beta/systems/2oWOabhqgy8KRHCWh2y1LoyoOBf/accounts'
+# Response Code: 200
+# Account ACME not found. Creating.
+export NAME=ACME
+# Using template: ..\config-templates\CreateAccountUserCreds\create_account_template.json
+# Request: 4
+curl -X POST 'http://172.23.129.153:8080/api/core/beta/systems/2oWOabhqgy8KRHCWh2y1LoyoOBf/accounts'
+# Response Code: 201
+# Extracting: 20241107-001-R-4-Result-systems-2oWOabhqgy8KRHCWh2y1LoyoOBf-accounts.json#id
+export SCP_ACCOUNT=2oWWC9eG7XhWdlX8PVD62PRoMkj
+# Find or create users  in account.
+# Request: 5
+curl -X GET 'http://172.23.129.153:8080/api/core/beta/accounts/2oWWC9eG7XhWdlX8PVD62PRoMkj/nats-users'
+# Response Code: 200
+# User: ACME-USER not found. Creating.
+# Get Default Signing Key Group (SKS)
+# Request: 6
+curl -X GET 'http://172.23.129.153:8080/api/core/beta/accounts/2oWWC9eG7XhWdlX8PVD62PRoMkj/account-sk-groups'
+# Response Code: 200
+# Extracting: 20241107-001-R-6-Result-accounts-2oWWC9eG7XhWdlX8PVD62PRoMkj-account-sk-groups.json#/items/name=Default#id
+export SKSID=2oWWCBulV4NuMrE6G6TIq8s92mR
+export NAME=ACME-USER
+# Create user
+# Using template: ..\config-templates\CreateAccountUserCreds\create_nats_user_template.json
+# Request: 7
+curl -X POST 'http://172.23.129.153:8080/api/core/beta/accounts/2oWWC9eG7XhWdlX8PVD62PRoMkj/nats-users'
+# Response Code: 201
+# Extracting: 20241107-001-R-7-Result-accounts-2oWWC9eG7XhWdlX8PVD62PRoMkj-nats-users.json#id
+export SCP_USER=2oWWCAQleUuiLNqUaZOueKSUJBu
+# Export user credentials
+# Request: 8
+curl -X POST 'http://172.23.129.153:8080/api/core/beta/nats-users/2oWWCAQleUuiLNqUaZOueKSUJBu/creds'
+# Response Code: 200
+# Writing result to: ..\config-templates\CreateAccountUserCreds\CLUSTER01/CLUSTER01-ACME-ACME-USER.creds

@@ -1,0 +1,170 @@
+{"items": [
+    {
+        "jwt_sync_error": "",
+        "created": "2024-11-07T15:08:18.58083Z",
+        "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJlZDI1NTE5LW5rZXkifQ.eyJqdGkiOiI0Qk9VU1YyVEhQRUM2V1RUMk9ZVlBOTTczSFVKU0hKQUk0U0dNN0VRTjRZVzVaUkhKVVpBIiwiaWF0IjoxNzMwOTkyMDk4LCJpc3MiOiJPQlRYR1RKRzRGRlFMRlFXQUNYUVRTQVUzWUdUVlQ3UTVIU0hTMzNRWDNVWkYyVkhPSTMyRU1ENiIsIm5hbWUiOiJTQ1AiLCJzdWIiOiJBRERRREdDUE5UNUZHM1RWSlc3SlBISko3SkhWNUk3M1lNNFZGQ1AzVFBZWTYzNUpPSlVOR0FPMiIsIm5hdHMiOnsiYXV0aG9yaXphdGlvbiI6e30sImRlZmF1bHRfcGVybWlzc2lvbnMiOnsicHViIjp7fSwic3ViIjp7fX0sImV4cG9ydHMiOlt7ImFjY291bnRfdG9rZW5fcG9zaXRpb24iOjUsIm5hbWUiOiJKUyBFVkVOVCBFeHBvcnQgU2VydmljZSIsInN1YmplY3QiOiIkSlMuRVZFTlQuKi5BQ0MuKi5cdTAwM2UiLCJ0eXBlIjoic2VydmljZSJ9LHsiYWNjb3VudF90b2tlbl9wb3NpdGlvbiI6NCwibmFtZSI6IlNlcnZpY2UgT2JzZXJ2YXRpb24gRXhwb3J0IFNlcnZpY2UiLCJzdWJqZWN0IjoiJHNjcC5tZXRyaWNzLkFDQy4qLioiLCJ0eXBlIjoic2VydmljZSJ9XSwibGltaXRzIjp7ImNvbm4iOi0xLCJjb25zdW1lciI6LTEsImRhdGEiOi0xLCJkaXNrX3N0b3JhZ2UiOi0xLCJleHBvcnRzIjotMSwiaW1wb3J0cyI6LTEsImxlYWYiOi0xLCJtZW1fc3RvcmFnZSI6LTEsInBheWxvYWQiOi0xLCJzdHJlYW1zIjotMSwic3VicyI6LTEsIndpbGRjYXJkcyI6dHJ1ZX0sInNjcCI6eyJzeXN0ZW1faWQiOiIyb1dqQ1VVZFFjTTNGUGNNblBpVGpMUG1ZdFkiLCJhY2NvdW50X2lkIjoiMm9XakNVa05CTUo4MEM0Y0JYWmtWeVBFMDZQIn0sInNpZ25pbmdfa2V5cyI6WyJBRERaQ0tGTEZRNEFNQlNDTjZIWUk3RVlZNkREVDVUN0tPM1VPU1pVQkVBTkdWU1dOT0hCWVRUMiIsIkFET1c3REFPNkxGMlJNSUtTWVhWTFZCQzJBVUhCSVJGTDVIVTNYMzVMSlFISVpQQldVS1NSNlo1Il0sInR5cGUiOiJhY2NvdW50IiwidmVyc2lvbiI6Mn19.eDveILhhoBqoI0IzIxAVbWb5A1CBjulhCbkMAX0TssgiCxH6koBsLVSd9aWmqylquid7HNjMhCPrFCuOt_rpCg",
+        "account_public_key": "ADDQDGCPNT5FG3TVJW7JPHJJ7JHV5I73YM4VFCP3TPYY635JOJUNGAO2",
+        "user_jwt_expires_in_secs": 0,
+        "team": {
+            "name": "Default",
+            "id": "2oWHOv4dlp5n6rxU97bQjD99ZfJ"
+        },
+        "nsc_managed": false,
+        "is_system_account": false,
+        "is_scp_account": true,
+        "claims_info": {"js_enabled": true},
+        "system": {
+            "jetstream_enabled": true,
+            "is_tenant": false,
+            "http_gateway_url": "",
+            "connection_type": "Direct",
+            "name": "CLUSTER02",
+            "server_urls": "nats://172.23.128.1:9201,nats://172.23.128.1:9202,nats://172.23.128.1:9203",
+            "user_jwt_expires_in_secs": 0,
+            "id": "2oWjCUUdQcM3FPcMnPiTjLPmYtY",
+            "state": "Provisioning",
+            "jetstream_domain": "CLUSTER02"
+        },
+        "jwt_sync_status": "InProgress",
+        "jwt_settings": {
+            "authorization": {},
+            "limits": {
+                "conn": -1,
+                "imports": -1,
+                "disk_storage": -1,
+                "data": -1,
+                "subs": -1,
+                "payload": -1,
+                "exports": -1,
+                "streams": -1,
+                "wildcards": true,
+                "leaf": -1,
+                "mem_storage": -1,
+                "consumer": -1
+            }
+        },
+        "claims": {
+            "sub": "ADDQDGCPNT5FG3TVJW7JPHJJ7JHV5I73YM4VFCP3TPYY635JOJUNGAO2",
+            "nats": {
+                "default_permissions": {
+                    "sub": {},
+                    "pub": {}
+                },
+                "authorization": {},
+                "exports": [
+                    {
+                        "subject": "$JS.EVENT.*.ACC.*.>",
+                        "account_token_position": 5,
+                        "name": "JS EVENT Export Service",
+                        "type": "service"
+                    },
+                    {
+                        "subject": "$scp.metrics.ACC.*.*",
+                        "account_token_position": 4,
+                        "name": "Service Observation Export Service",
+                        "type": "service"
+                    }
+                ],
+                "signing_keys": [
+                    "ADDZCKFLFQ4AMBSCN6HYI7EYY6DDT5T7KO3UOSZUBEANGVSWNOHBYTT2",
+                    "ADOW7DAO6LF2RMIKSYXVLVBC2AUHBIRFL5HU3X35LJQHIZPBWUKSR6Z5"
+                ],
+                "type": "account",
+                "version": 2,
+                "limits": {
+                    "conn": -1,
+                    "imports": -1,
+                    "disk_storage": -1,
+                    "data": -1,
+                    "subs": -1,
+                    "payload": -1,
+                    "exports": -1,
+                    "streams": -1,
+                    "wildcards": true,
+                    "leaf": -1,
+                    "mem_storage": -1,
+                    "consumer": -1
+                }
+            },
+            "iss": "OBTXGTJG4FFQLFQWACXQTSAU3YGTVT7Q5HSHS33QX3UZF2VHOI32EMD6",
+            "name": "SCP",
+            "iat": 1730992098,
+            "jti": "4BOUSV2THPEC6WTT2OYVPNM73HUJSHJAI4SGM7EQN4YW5ZRHJUZA"
+        },
+        "name": "SCP",
+        "id": "2oWjCUkNBMJ80C4cBXZkVyPE06P"
+    },
+    {
+        "jwt_sync_error": "",
+        "created": "2024-11-07T15:08:18.58083Z",
+        "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJlZDI1NTE5LW5rZXkifQ.eyJqdGkiOiJHNTRDQlBLQUE0RklKT0xIWlJGUkVVUjJPS0MzWkJXWENPTjJHNVdHVVgzQVhLVUdNVkpBIiwiaWF0IjoxNzMwOTkyMDk4LCJpc3MiOiJPQlRYR1RKRzRGRlFMRlFXQUNYUVRTQVUzWUdUVlQ3UTVIU0hTMzNRWDNVWkYyVkhPSTMyRU1ENiIsIm5hbWUiOiJTWVMiLCJzdWIiOiJBQUJZS041R05NRkZaVjJKVUY0T1VCQk5XVjZTT1lZWUZGM0paSllIRkJJQVI3NFlVQzRWQktXTCIsIm5hdHMiOnsiYXV0aG9yaXphdGlvbiI6e30sImRlZmF1bHRfcGVybWlzc2lvbnMiOnsicHViIjp7fSwic3ViIjp7fX0sImxpbWl0cyI6eyJjb25uIjotMSwiZGF0YSI6LTEsImV4cG9ydHMiOi0xLCJpbXBvcnRzIjotMSwibGVhZiI6LTEsInBheWxvYWQiOi0xLCJzdWJzIjotMSwid2lsZGNhcmRzIjp0cnVlfSwic2NwIjp7InN5c3RlbV9pZCI6IjJvV2pDVVVkUWNNM0ZQY01uUGlUakxQbVl0WSIsImFjY291bnRfaWQiOiIyb1dqQ1h3T3V5V3NRYWtZeW5rdkJlS0dQT00ifSwic2lnbmluZ19rZXlzIjpbIkFBUEFGSVpOS05YQ0NQVEZDVVRUVVFZUlRZR0NJWVZRRTRHUlpMQUc3N09BUlQ3UVUySTZJN0hDIiwiQUJNVVZRTFVUMlZGNVo1NjRUMzYyNlJNUlBHQUtSVk5VMkdJNUZUU0pTM0tHUkJDNU9GQUczTDMiXSwidHlwZSI6ImFjY291bnQiLCJ2ZXJzaW9uIjoyfX0.7XdY4uWvySMp9L-o_mZa2mwETBZhw0Tq0SxYuyuzp2UEsjNhZKlUg-6KczV3ebwFvDpwz5i9rqA5NPShEhsWBQ",
+        "account_public_key": "AABYKN5GNMFFZV2JUF4OUBBNWV6SOYYYFF3JZJYHFBIAR74YUC4VBKWL",
+        "user_jwt_expires_in_secs": 0,
+        "team": {
+            "name": "Default",
+            "id": "2oWHOv4dlp5n6rxU97bQjD99ZfJ"
+        },
+        "nsc_managed": false,
+        "is_system_account": true,
+        "is_scp_account": false,
+        "claims_info": {"js_enabled": false},
+        "system": {
+            "jetstream_enabled": true,
+            "is_tenant": false,
+            "http_gateway_url": "",
+            "connection_type": "Direct",
+            "name": "CLUSTER02",
+            "server_urls": "nats://172.23.128.1:9201,nats://172.23.128.1:9202,nats://172.23.128.1:9203",
+            "user_jwt_expires_in_secs": 0,
+            "id": "2oWjCUUdQcM3FPcMnPiTjLPmYtY",
+            "state": "Provisioning",
+            "jetstream_domain": "CLUSTER02"
+        },
+        "jwt_sync_status": "InProgress",
+        "jwt_settings": {
+            "authorization": {},
+            "limits": {
+                "conn": -1,
+                "imports": -1,
+                "data": -1,
+                "subs": -1,
+                "payload": -1,
+                "exports": -1,
+                "wildcards": true,
+                "leaf": -1
+            }
+        },
+        "claims": {
+            "sub": "AABYKN5GNMFFZV2JUF4OUBBNWV6SOYYYFF3JZJYHFBIAR74YUC4VBKWL",
+            "nats": {
+                "default_permissions": {
+                    "sub": {},
+                    "pub": {}
+                },
+                "authorization": {},
+                "signing_keys": [
+                    "AAPAFIZNKNXCCPTFCUTTUQYRTYGCIYVQE4GRZLAG77OART7QU2I6I7HC",
+                    "ABMUVQLUT2VF5Z564T3626RMRPGAKRVNU2GI5FTSJS3KGRBC5OFAG3L3"
+                ],
+                "type": "account",
+                "version": 2,
+                "limits": {
+                    "conn": -1,
+                    "imports": -1,
+                    "data": -1,
+                    "subs": -1,
+                    "payload": -1,
+                    "exports": -1,
+                    "wildcards": true,
+                    "leaf": -1
+                }
+            },
+            "iss": "OBTXGTJG4FFQLFQWACXQTSAU3YGTVT7Q5HSHS33QX3UZF2VHOI32EMD6",
+            "name": "SYS",
+            "iat": 1730992098,
+            "jti": "G54CBPKAA4FIJOLHZRFREUR2OKC3ZBWXCON2G5WGUX3AXKUGMVJA"
+        },
+        "name": "SYS",
+        "id": "2oWjCXwOuyWsQakYynkvBeKGPOM"
+    }
+]}

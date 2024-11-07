@@ -1,0 +1,58 @@
+{
+    "sk_group_id": "2oWWCBulV4NuMrE6G6TIq8s92mR",
+    "user_public_key": "UCGGJ6UAPMKDPJ5DFCAIHYPS22PQM7WYQIXBB7AU65SAOBWU3PGX6LXX",
+    "created": "2024-11-07T13:21:21.530003Z",
+    "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJlZDI1NTE5LW5rZXkifQ.eyJqdGkiOiJWQ0RIMkhJRE5BRFJHSzdHSFVGMzZDUDZXSlhaN1lVSFhKVFRWSlJWSDNYNEQzVjM3STZRIiwiaWF0IjoxNzMwOTg1NjgxLCJpc3MiOiJBQjZSTFUzSkZUWkM0QVNTRVhLTzJaSTIzQUlFU0QzRUFaSkhBNVE1TjdKSjJPUllIS09VV0JOQiIsIm5hbWUiOiJBQ01FLVVTRVIiLCJzdWIiOiJVQ0dHSjZVQVBNS0RQSjVERkNBSUhZUFMyMlBRTTdXWVFJWEJCN0FVNjVTQU9CV1UzUEdYNkxYWCIsIm5hdHMiOnsicHViIjp7fSwic3ViIjp7fSwic3VicyI6LTEsImRhdGEiOi0xLCJwYXlsb2FkIjotMSwiaXNzdWVyX2FjY291bnQiOiJBQkdIS1FGSUJUTVNSVTZSQzRUVjJERlpGNDNYQklOSUtFTEQ1SUNONkNWNTJDQ0lURlNPRE1DVyIsInR5cGUiOiJ1c2VyIiwidmVyc2lvbiI6Mn19.9curab_Fp8Y8bYDXTODbeVTgam6mGlyKzv-BHXAFrsKzRx1FO5yLPWY5bM22Zsd2Y_dv12COz2pIv1eD1l36Dg",
+    "team": {
+        "name": "Default",
+        "id": "2oWHOv4dlp5n6rxU97bQjD99ZfJ"
+    },
+    "jwt_expires_at_max": 0,
+    "system": {
+        "jetstream_enabled": true,
+        "is_tenant": false,
+        "http_gateway_url": "",
+        "connection_type": "Direct",
+        "name": "CLUSTER01",
+        "server_urls": "nats://172.23.128.1:9101,nats://172.23.128.1:9102,nats://172.23.128.1:9103",
+        "user_jwt_expires_in_secs": 0,
+        "id": "2oWOabhqgy8KRHCWh2y1LoyoOBf",
+        "state": "Connected",
+        "jetstream_domain": "CLUSTER01"
+    },
+    "jwt_settings": {
+        "sub": {},
+        "data": -1,
+        "subs": -1,
+        "payload": -1,
+        "pub": {}
+    },
+    "claims": {
+        "sub": "UCGGJ6UAPMKDPJ5DFCAIHYPS22PQM7WYQIXBB7AU65SAOBWU3PGX6LXX",
+        "nats": {
+            "sub": {},
+            "data": -1,
+            "subs": -1,
+            "payload": -1,
+            "issuer_account": "ABGHKQFIBTMSRU6RC4TV2DFZF43XBINIKELD5ICN6CV52CCITFSODMCW",
+            "pub": {},
+            "type": "user",
+            "version": 2
+        },
+        "iss": "AB6RLU3JFTZC4ASSEXKO2ZI23AIESD3EAZJHA5Q5N7JJ2ORYHKOUWBNB",
+        "name": "ACME-USER",
+        "iat": 1730985681,
+        "jti": "VCDH2HIDNADRGK7GHUF36CP6WJXZ7YUHXJTTVJRVH3X4D3V37I6Q"
+    },
+    "name": "ACME-USER",
+    "jwt_expires_in_secs": 0,
+    "id": "2oWWCAQleUuiLNqUaZOueKSUJBu",
+    "account": {
+        "account_public_key": "ABGHKQFIBTMSRU6RC4TV2DFZF43XBINIKELD5ICN6CV52CCITFSODMCW",
+        "name": "ACME",
+        "user_jwt_expires_in_secs": 100000000,
+        "id": "2oWWC9eG7XhWdlX8PVD62PRoMkj",
+        "is_system_account": false,
+        "is_scp_account": false
+    }
+}

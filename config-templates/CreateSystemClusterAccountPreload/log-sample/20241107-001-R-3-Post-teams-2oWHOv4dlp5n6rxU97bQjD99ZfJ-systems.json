@@ -1,0 +1,11 @@
+{
+    "jetstream_enabled": true,
+    "connection_type": "Direct",
+    "name": "CLUSTER02",
+    "jetstream_domain": "CLUSTER02",
+    "url": "nats://172.23.128.1:9201,nats://172.23.128.1:9202,nats://172.23.128.1:9203",
+    "direct_connection_opts": {
+        "tls_mode": "Auto",
+        "tls_insecure_skip_verify": false
+    }
+}

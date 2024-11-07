@@ -1,0 +1,36 @@
+{
+    "jwt_settings": {
+        "authorization": {
+            "allowed_accounts": [],
+            "auth_users": [],
+            "xkey": ""
+        },
+        "mappings": {},
+        "revocations": {},
+        "description": "None",
+        "info_url": "",
+        "limits": {
+            "mem_max_stream_bytes": 0,
+            "tiered_limits": {},
+            "conn": 0,
+            "imports": 0,
+            "data": 0,
+            "subs": 0,
+            "exports": 0,
+            "max_bytes_required": false,
+            "streams": 0,
+            "wildcards": false,
+            "disallow_bearer": false,
+            "leaf": 0,
+            "mem_storage": 0,
+            "max_ack_pending": 0,
+            "disk_max_stream_bytes": 0,
+            "disk_storage": 0,
+            "payload": 0,
+            "consumer": 0
+        },
+        "tags": []
+    },
+    "name": "ACME",
+    "user_jwt_expires_in_secs": 100000000
+}

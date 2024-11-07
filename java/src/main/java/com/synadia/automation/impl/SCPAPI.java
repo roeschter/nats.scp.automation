@@ -37,7 +37,9 @@ public class SCPAPI implements Logger {
 	public static String SCP_TEAM = "SCP_TEAM";
 	public static String SCP_TEAM_NAME = "SCP_TEAM_NAME";
 	public static String SCP_ACCOUNT = "SCP_ACCOUNT";
+	public static String SCP_ACCOUNT_NAME = "SCP_ACCOUNT_NAME";
 	public static String SCP_USER = "SCP_USER";
+	public static String SCP_USER_NAME = "SCP_USER_NAME";
 
 	static String ENC = "UTF-8";
 	static String QUOTE = "\'";
@@ -165,14 +167,21 @@ public class SCPAPI implements Logger {
 		return text;
 	}
 
+	public String getExampleName() {
+		String fullName = Thread.currentThread().getStackTrace()[2].getClassName();
+
+		return fullName.substring(fullName.lastIndexOf('.')+1);
+	}
+
 	public void outputFromTemplate( String outName, String template ) {
 		String text = readTemplate(template);
-		File f = new File( env( "SCP_OUTPUT" ) + "/"+outName );
-		writeFile( f, text);
+		outputFile( outName, text);
 	}
 
 	public void outputFile( String outName, String text ) {
-		File f = new File( env( "SCP_OUTPUT" ) + "/"+outName );
+		String fName = env( "SCP_OUTPUT" ) + "/" + outName;
+		logComment("Writing result to: " + fName );
+		File f = new File( fName );
 		writeFile( f, text);
 	}
 

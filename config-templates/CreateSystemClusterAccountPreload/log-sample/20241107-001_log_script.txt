@@ -1,0 +1,78 @@
+export SCP_LOG=D:\private\nats.io_synadia\nats.scp.automation\log
+export SCP_URL=http://172.23.129.153:8080/api/core/beta/
+export SCP_BEARER=uat_mOywaPDfEgNUrd1eRqpxXo34LmRASe8Ze5mcBHV6rkRBUzEg9Vn1gf9k5xhUEZ04
+export SCP_TEAM_NAME=Default
+export SCP_SYSTEM_NAME=CLUSTER02
+export SCP_ACCOUNT_NAME=ACME
+export SCP_TEMPLATES=..\config-templates\CreateSystemClusterAccountPreload\
+export SCP_OUTPUT=..\config-templates\CreateSystemClusterAccountPreload\CLUSTER02
+export SCP_PORTS=9201, 9202, 9203
+export SCP_ROUTEPORTS=9211, 9212, 9213
+export SCP_SERVER_NAMES=NODE1, NODE2, NODE3
+export SERVER_HOST_NAMES=172.23.128.1, 172.23.128.1, 172.23.128.1
+# DONE INITIALIZING - Set Env variables above to configure
+# Find the named team
+# Request: 1
+curl -X GET 'http://172.23.129.153:8080/api/core/beta/teams'
+# Response Code: 200
+# Extracting: 20241107-001-R-1-Result-teams.json#/items/name=Default#id
+export SCP_TEAM=2oWHOv4dlp5n6rxU97bQjD99ZfJ
+# Find or create system
+# Request: 2
+curl -X GET 'http://172.23.129.153:8080/api/core/beta/teams/2oWHOv4dlp5n6rxU97bQjD99ZfJ/systems'
+# Response Code: 200
+# CLUSTER02: System not found - Creating new System
+export URL=nats://172.23.128.1:9201,nats://172.23.128.1:9202,nats://172.23.128.1:9203
+export NAME=CLUSTER02
+# Using template: ..\config-templates\CreateSystemClusterAccountPreload\create_system_template.json
+# Request: 3
+curl -X POST 'http://172.23.129.153:8080/api/core/beta/teams/2oWHOv4dlp5n6rxU97bQjD99ZfJ/systems'
+# Response Code: 201
+# Extracting: 20241107-001-R-3-Result-teams-2oWHOv4dlp5n6rxU97bQjD99ZfJ-systems.json#id
+export SCP_SYSTEM=2oWjCUUdQcM3FPcMnPiTjLPmYtY
+# Extracting: 20241107-001-R-3-Result-teams-2oWHOv4dlp5n6rxU97bQjD99ZfJ-systems.json#system_account_jwt
+export system_account_jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJlZDI1NTE5LW5rZXkifQ.eyJqdGkiOiJHNTRDQlBLQUE0RklKT0xIWlJGUkVVUjJPS0MzWkJXWENPTjJHNVdHVVgzQVhLVUdNVkpBIiwiaWF0IjoxNzMwOTkyMDk4LCJpc3MiOiJPQlRYR1RKRzRGRlFMRlFXQUNYUVRTQVUzWUdUVlQ3UTVIU0hTMzNRWDNVWkYyVkhPSTMyRU1ENiIsIm5hbWUiOiJTWVMiLCJzdWIiOiJBQUJZS041R05NRkZaVjJKVUY0T1VCQk5XVjZTT1lZWUZGM0paSllIRkJJQVI3NFlVQzRWQktXTCIsIm5hdHMiOnsiYXV0aG9yaXphdGlvbiI6e30sImRlZmF1bHRfcGVybWlzc2lvbnMiOnsicHViIjp7fSwic3ViIjp7fX0sImxpbWl0cyI6eyJjb25uIjotMSwiZGF0YSI6LTEsImV4cG9ydHMiOi0xLCJpbXBvcnRzIjotMSwibGVhZiI6LTEsInBheWxvYWQiOi0xLCJzdWJzIjotMSwid2lsZGNhcmRzIjp0cnVlfSwic2NwIjp7InN5c3RlbV9pZCI6IjJvV2pDVVVkUWNNM0ZQY01uUGlUakxQbVl0WSIsImFjY291bnRfaWQiOiIyb1dqQ1h3T3V5V3NRYWtZeW5rdkJlS0dQT00ifSwic2lnbmluZ19rZXlzIjpbIkFBUEFGSVpOS05YQ0NQVEZDVVRUVVFZUlRZR0NJWVZRRTRHUlpMQUc3N09BUlQ3UVUySTZJN0hDIiwiQUJNVVZRTFVUMlZGNVo1NjRUMzYyNlJNUlBHQUtSVk5VMkdJNUZUU0pTM0tHUkJDNU9GQUczTDMiXSwidHlwZSI6ImFjY291bnQiLCJ2ZXJzaW9uIjoyfX0.7XdY4uWvySMp9L-o_mZa2mwETBZhw0Tq0SxYuyuzp2UEsjNhZKlUg-6KczV3ebwFvDpwz5i9rqA5NPShEhsWBQ
+# Extracting: 20241107-001-R-3-Result-teams-2oWHOv4dlp5n6rxU97bQjD99ZfJ-systems.json#operator_jwt
+export operator_jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJlZDI1NTE5LW5rZXkifQ.eyJqdGkiOiJIWEVZRkNTSU9RNFNQNlk3WUNKVFNPVTNRSEZVNVk3TVNFSVhZUzU0SUNJUlVGQVRCMkJRIiwiaWF0IjoxNzMwOTkyMDk4LCJpc3MiOiJPQVpNTU5OSzJRVUVXQ0xZTDdMSVpEUFhSNTVLT01GNEJJM1dVQU5TUzNWV0JONzJEV1pHT0RBNSIsIm5hbWUiOiJDTFVTVEVSMDIiLCJzdWIiOiJPQVpNTU5OSzJRVUVXQ0xZTDdMSVpEUFhSNTVLT01GNEJJM1dVQU5TUzNWV0JONzJEV1pHT0RBNSIsIm5hdHMiOnsic2lnbmluZ19rZXlzIjpbIk9CVFhHVEpHNEZGUUxGUVdBQ1hRVFNBVTNZR1RWVDdRNUhTSFMzM1FYM1VaRjJWSE9JMzJFTUQ2Il0sIm9wZXJhdG9yX3NlcnZpY2VfdXJscyI6WyJuYXRzOi8vMTcyLjIzLjEyOC4xOjkyMDEsbmF0czovLzE3Mi4yMy4xMjguMTo5MjAyLG5hdHM6Ly8xNzIuMjMuMTI4LjE6OTIwMyJdLCJzeXN0ZW1fYWNjb3VudCI6IkFBQllLTjVHTk1GRlpWMkpVRjRPVUJCTldWNlNPWVlZRkYzSlpKWUhGQklBUjc0WVVDNFZCS1dMIiwidHlwZSI6Im9wZXJhdG9yIiwidmVyc2lvbiI6Mn19.IQzwMnrvLAKaBcQy0o2Yx-CPPKkDdxE5Fh_fyyw7PSJ3mD_8Mm2zjQ-SCZhyn0la1InyDElcLoWCGV-z7KdEBg
+# Extracting: 20241107-001-R-3-Result-teams-2oWHOv4dlp5n6rxU97bQjD99ZfJ-systems.json#operator_claims/nats/system_account
+export system_account_key=AABYKN5GNMFFZV2JUF4OUBBNWV6SOYYYFF3JZJYHFBIAR74YUC4VBKWL
+# Find or create account
+# Request: 4
+curl -X GET 'http://172.23.129.153:8080/api/core/beta/systems/2oWjCUUdQcM3FPcMnPiTjLPmYtY/accounts'
+# Response Code: 200
+# Account ACME not found. Creating.
+export NAME=ACME
+# Using template: ..\config-templates\CreateSystemClusterAccountPreload\create_account_template.json
+# Request: 5
+curl -X POST 'http://172.23.129.153:8080/api/core/beta/systems/2oWjCUUdQcM3FPcMnPiTjLPmYtY/accounts'
+# Response Code: 201
+# Extracting: 20241107-001-R-5-Result-systems-2oWjCUUdQcM3FPcMnPiTjLPmYtY-accounts.json#id
+export SCP_ACCOUNT=2oWjCbuQS51Sk2xB9aqS4t8BWG5
+# Create account preload - using acocunt public key and JWT
+# Extracting: 20241107-001-R-5-Result-systems-2oWjCUUdQcM3FPcMnPiTjLPmYtY-accounts.json#account_public_key
+# Extracting: 20241107-001-R-5-Result-systems-2oWjCUUdQcM3FPcMnPiTjLPmYtY-accounts.json#jwt
+export PRELOAD=ADZYN5PLSVLOYWCSSJS5CREFHWECDEVPVRJ6OKRQWI2BXZ2PJYSXDG5N: eyJ0eXAiOiJKV1QiLCJhbGciOiJlZDI1NTE5LW5rZXkifQ.eyJqdGkiOiJVNFZFSTVRRkhVVlRCREFHTVdaRk1VVEMyWlZTRlBQQldKU1dBN0ZBSlpFNUs2TEdNWVpBIiwiaWF0IjoxNzMwOTkyMDk4LCJpc3MiOiJPQlRYR1RKRzRGRlFMRlFXQUNYUVRTQVUzWUdUVlQ3UTVIU0hTMzNRWDNVWkYyVkhPSTMyRU1ENiIsIm5hbWUiOiJBQ01FIiwic3ViIjoiQURaWU41UExTVkxPWVdDU1NKUzVDUkVGSFdFQ0RFVlBWUko2T0tSUVdJMkJYWjJQSllTWERHNU4iLCJuYXRzIjp7ImF1dGhvcml6YXRpb24iOnt9LCJkZWZhdWx0X3Blcm1pc3Npb25zIjp7InB1YiI6e30sInN1YiI6e319LCJkZXNjcmlwdGlvbiI6Ik5vbmUiLCJpbXBvcnRzIjpbeyJhY2NvdW50IjoiQUREUURHQ1BOVDVGRzNUVkpXN0pQSEpKN0pIVjVJNzNZTTRWRkNQM1RQWVk2MzVKT0pVTkdBTzIiLCJsb2NhbF9zdWJqZWN0IjoiJHNjcC5tZXRyaWNzLioiLCJuYW1lIjoiW01hbmFnZWQgSW1wb3J0XSBTZXJ2aWNlIE1ldHJpY3MgSW1wb3J0Iiwic3ViamVjdCI6IiRzY3AubWV0cmljcy5BQ0MuQURaWU41UExTVkxPWVdDU1NKUzVDUkVGSFdFQ0RFVlBWUko2T0tSUVdJMkJYWjJQSllTWERHNU4uKiIsInR5cGUiOiJzZXJ2aWNlIn0seyJhY2NvdW50IjoiQUREUURHQ1BOVDVGRzNUVkpXN0pQSEpKN0pIVjVJNzNZTTRWRkNQM1RQWVk2MzVKT0pVTkdBTzIiLCJsb2NhbF9zdWJqZWN0IjoiJEpTLkVWRU5ULiouXHUwMDNlIiwibmFtZSI6IltNYW5hZ2VkIEltcG9ydF0gSlMgbWV0cmljcyIsInN1YmplY3QiOiIkSlMuRVZFTlQuKi5BQ0MuQURaWU41UExTVkxPWVdDU1NKUzVDUkVGSFdFQ0RFVlBWUko2T0tSUVdJMkJYWjJQSllTWERHNU4uXHUwMDNlIiwidHlwZSI6InNlcnZpY2UifV0sImxpbWl0cyI6eyJjb25uIjotMSwiZGF0YSI6LTEsImV4cG9ydHMiOi0xLCJpbXBvcnRzIjotMSwibGVhZiI6LTEsInBheWxvYWQiOi0xLCJzdWJzIjotMSwid2lsZGNhcmRzIjp0cnVlfSwic2NwIjp7InN5c3RlbV9pZCI6IjJvV2pDVVVkUWNNM0ZQY01uUGlUakxQbVl0WSIsImFjY291bnRfaWQiOiIyb1dqQ2J1UVM1MVNrMnhCOWFxUzR0OEJXRzUifSwic2lnbmluZ19rZXlzIjpbIkFCQlNCTVBDWFM0SFNVUTZOTFBKMlZaQjZXREtCRVVWQkpOWEpVT1g2UDZUUkM0VElOWUhKREROIiwiQURYUzJGRkQ3QkJIRlU3SlJPRlFDVDJINElYWjQ1VU5PRFdHSENCVzJDVEtNT0lJSU9DUlJTU0EiXSwidHlwZSI6ImFjY291bnQiLCJ2ZXJzaW9uIjoyfX0.4DRfp0P9GkCv-CawjevN89G6adUhkmCwgxwWLxlMneJrre6Jv6RR3nqiNHGmxy6lNVd8UbWjM7dZP8KRGjGoCQ
+
+# Create cluster config from template for each server
+export ROUTES=nats://172.23.128.1:9211,nats://172.23.128.1:9212,nats://172.23.128.1:9213
+export SERVER_NAME=NODE1
+export SERVER_HOST_NAME=172.23.128.1
+export CLUSTER=CLUSTER02
+export PORT=9201
+export RPORT=9211
+# Using template: ..\config-templates\CreateSystemClusterAccountPreload\node_template.conf
+# Writing result to: ..\config-templates\CreateSystemClusterAccountPreload\CLUSTER02/NODE1.conf
+export SERVER_NAME=NODE2
+export SERVER_HOST_NAME=172.23.128.1
+export CLUSTER=CLUSTER02
+export PORT=9202
+export RPORT=9212
+# Using template: ..\config-templates\CreateSystemClusterAccountPreload\node_template.conf
+# Writing result to: ..\config-templates\CreateSystemClusterAccountPreload\CLUSTER02/NODE2.conf
+export SERVER_NAME=NODE3
+export SERVER_HOST_NAME=172.23.128.1
+export CLUSTER=CLUSTER02
+export PORT=9203
+export RPORT=9213
+# Using template: ..\config-templates\CreateSystemClusterAccountPreload\node_template.conf
+# Writing result to: ..\config-templates\CreateSystemClusterAccountPreload\CLUSTER02/NODE3.conf

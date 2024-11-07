@@ -20,7 +20,7 @@ public class CreateOperatorLeafCluster {
 		api.env(SCP_TEAM_NAME, "Default");
 		api.env(SCP_SYSTEM_NAME, "C10_CP");
 
-		api.env(SCP_TEMPLATES, "..\\config-templates\\CreateOperatorLeafCluster\\");
+		api.env(SCP_TEMPLATES, "..\\config-templates\\"+ api.getExampleName() +"\\");
 		api.env(SCP_OUTPUT,  api.env(SCP_TEMPLATES) + api.env("SCP_LEAF_NAME") );
 		api.env("SCP_CLUSTER_URL", "nats://172.23.128.1:4301" );
 

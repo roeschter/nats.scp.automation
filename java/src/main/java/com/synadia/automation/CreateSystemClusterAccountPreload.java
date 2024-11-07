@@ -7,7 +7,7 @@ import com.synadia.automation.impl.JSON;
 import com.synadia.automation.impl.SCPAPI;
 
 
-public class CreateSystemCluster {
+public class CreateSystemClusterAccountPreload {
 
 	public static void main ( String arg[] ) throws Exception
 	{
@@ -17,14 +17,15 @@ public class CreateSystemCluster {
 		api.env(SCP_BEARER, "Create Acess token in SCP in your personal profile section.");
 
 		api.env(SCP_TEAM_NAME, "Default");
-		api.env(SCP_SYSTEM_NAME, "CLUSTER01");
+		api.env(SCP_SYSTEM_NAME, "CLUSTER02");
+		api.env(SCP_ACCOUNT_NAME, "ACME");
 
 		api.env(SCP_TEMPLATES, "..\\config-templates\\"+ api.getExampleName() +"\\");
 		api.env(SCP_OUTPUT,  api.env(SCP_TEMPLATES) + api.env("SCP_SYSTEM_NAME") );
 
 
-		String[] PORT = api.envList("SCP_PORTS", "9101, 9102, 9103");
-		String[] ROUTEPORT = api.envList("SCP_ROUTEPORTS", "9111, 9112, 9113");
+		String[] PORT = api.envList("SCP_PORTS", "9201, 9202, 9203");
+		String[] ROUTEPORT = api.envList("SCP_ROUTEPORTS", "9211, 9212, 9213");
 		String[] SERVER_NAME = api.envList( "SCP_SERVER_NAMES", "NODE1, NODE2, NODE3" );
 		String[] SERVER_HOST_NAME = api.envList( "SERVER_HOST_NAMES", "172.23.128.1, 172.23.128.1, 172.23.128.1" );
 
@@ -58,6 +59,29 @@ public class CreateSystemCluster {
 		api.envSet( "system_account_jwt",  system.get( "system_account_jwt" ) );
 		api.envSet( "operator_jwt",  system.get( "operator_jwt" ) );
 		api.envSet( "system_account_key", system.get( "operator_claims", "nats", "system_account" ) );
+
+
+		//-------------------------------------------------
+		api.logComment("Find or create account");
+		JSON accounts = api.listAccounts( api.env(SCP_SYSTEM));
+
+		JSON account = accounts.getItemByKey( "name", api.env(SCP_ACCOUNT_NAME) );
+
+		if ( !account.hasData ) {
+
+			api.logComment("Account "+ api.env(SCP_ACCOUNT_NAME) + " not found. Creating.");
+			api.envSet( "NAME", api.env(SCP_ACCOUNT_NAME) );
+
+			account = api.createAccount( api.env(SCP_SYSTEM), "create_account_template.json" );
+		}
+
+		api.envSet(SCP_ACCOUNT, account.get("id"));
+
+		//-------------------------------------------------
+		api.logComment("Create account preload - using acocunt public key and JWT");
+
+		String preload = account.get("account_public_key") + ": " +  account.get("jwt") + "\n";
+		api.envSet("PRELOAD", preload);
 
 
 		//-------------------------------------------------

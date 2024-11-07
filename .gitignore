@@ -3,3 +3,5 @@
 /config-templates/CreateSystemCluster/CLUSTER01/js
 /config-templates/CreateSystemCluster/CLUSTER01/jwt
 *.bat
+/config-templates/CreateSystemClusterAccountPreload/CLUSTER02/js
+/config-templates/CreateSystemClusterAccountPreload/CLUSTER02/jwt

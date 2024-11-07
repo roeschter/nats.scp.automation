@@ -1,0 +1,14 @@
+{
+    "sk_group_id": "2oWWCBulV4NuMrE6G6TIq8s92mR",
+    "jwt_settings": {
+        "sub": {},
+        "bearer_token": false,
+        "times_location": "",
+        "data": -1,
+        "payload": -1,
+        "subs": -1,
+        "pub": {}
+    },
+    "name": "ACME-USER",
+    "jwt_expires_in_secs": 0
+}

@@ -1,0 +1,91 @@
+{
+    "jwt_sync_error": "",
+    "created": "2024-11-07T13:21:21.475632Z",
+    "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJlZDI1NTE5LW5rZXkifQ.eyJqdGkiOiIzNlJJSzdXR0RQSTVDUE5OUk5RNU5FR0ZMUFFQUERMNjVWNFQ0RlFYRkFDQkI3U0VCS0xRIiwiaWF0IjoxNzMwOTg1NjgxLCJpc3MiOiJPQVdZN0NLV0tMNk9RQTJIQlZXSTNaUENVNkdEUE9ZU1JNWUlMVEw0RVJWM0NVMzNJTEZCUFJZTSIsIm5hbWUiOiJBQ01FIiwic3ViIjoiQUJHSEtRRklCVE1TUlU2UkM0VFYyREZaRjQzWEJJTklLRUxENUlDTjZDVjUyQ0NJVEZTT0RNQ1ciLCJuYXRzIjp7ImF1dGhvcml6YXRpb24iOnt9LCJkZWZhdWx0X3Blcm1pc3Npb25zIjp7InB1YiI6e30sInN1YiI6e319LCJkZXNjcmlwdGlvbiI6Ik5vbmUiLCJpbXBvcnRzIjpbeyJhY2NvdW50IjoiQURaSDRDVUFOMlhOVkFXRDVaWVMyN1dQRkpYRUpEWFRFQ05OUElNUTY3Uk5RNk9NQllZRlhJS1YiLCJsb2NhbF9zdWJqZWN0IjoiJHNjcC5tZXRyaWNzLioiLCJuYW1lIjoiW01hbmFnZWQgSW1wb3J0XSBTZXJ2aWNlIE1ldHJpY3MgSW1wb3J0Iiwic3ViamVjdCI6IiRzY3AubWV0cmljcy5BQ0MuQUJHSEtRRklCVE1TUlU2UkM0VFYyREZaRjQzWEJJTklLRUxENUlDTjZDVjUyQ0NJVEZTT0RNQ1cuKiIsInR5cGUiOiJzZXJ2aWNlIn0seyJhY2NvdW50IjoiQURaSDRDVUFOMlhOVkFXRDVaWVMyN1dQRkpYRUpEWFRFQ05OUElNUTY3Uk5RNk9NQllZRlhJS1YiLCJsb2NhbF9zdWJqZWN0IjoiJEpTLkVWRU5ULiouXHUwMDNlIiwibmFtZSI6IltNYW5hZ2VkIEltcG9ydF0gSlMgbWV0cmljcyIsInN1YmplY3QiOiIkSlMuRVZFTlQuKi5BQ0MuQUJHSEtRRklCVE1TUlU2UkM0VFYyREZaRjQzWEJJTklLRUxENUlDTjZDVjUyQ0NJVEZTT0RNQ1cuXHUwMDNlIiwidHlwZSI6InNlcnZpY2UifV0sImxpbWl0cyI6eyJjb25uIjotMSwiZGF0YSI6LTEsImV4cG9ydHMiOi0xLCJpbXBvcnRzIjotMSwibGVhZiI6LTEsInBheWxvYWQiOi0xLCJzdWJzIjotMSwid2lsZGNhcmRzIjp0cnVlfSwic2NwIjp7InN5c3RlbV9pZCI6IjJvV09hYmhxZ3k4S1JIQ1doMnkxTG95b09CZiIsImFjY291bnRfaWQiOiIyb1dXQzllRzdYaFdkbFg4UFZENjJQUm9Na2oifSwic2lnbmluZ19rZXlzIjpbIkFCNlJMVTNKRlRaQzRBU1NFWEtPMlpJMjNBSUVTRDNFQVpKSEE1UTVON0pKMk9SWUhLT1VXQk5CIiwiQUNKWVZVSlhDQkFGNks0QUNYVko1NkdTSEdJUE4zSTJWN1dSR0VOR1NWWUhXU1g2MzRVQTM0NEgiXSwidHlwZSI6ImFjY291bnQiLCJ2ZXJzaW9uIjoyfX0.OVdTG1nRpr0arfNUW9I7s-4eUcdJ_vH_0Du_Glr6k4KG9uiPJnVx-qFZc2ixDCQPmbTjKaSRu37YPlyVR-I0Dg",
+    "account_public_key": "ABGHKQFIBTMSRU6RC4TV2DFZF43XBINIKELD5ICN6CV52CCITFSODMCW",
+    "user_jwt_expires_in_secs": 100000000,
+    "team": {
+        "name": "Default",
+        "id": "2oWHOv4dlp5n6rxU97bQjD99ZfJ"
+    },
+    "nsc_managed": false,
+    "is_system_account": false,
+    "is_scp_account": false,
+    "claims_info": {"js_enabled": false},
+    "system": {
+        "jetstream_enabled": true,
+        "is_tenant": false,
+        "http_gateway_url": "",
+        "connection_type": "Direct",
+        "name": "CLUSTER01",
+        "server_urls": "nats://172.23.128.1:9101,nats://172.23.128.1:9102,nats://172.23.128.1:9103",
+        "user_jwt_expires_in_secs": 0,
+        "id": "2oWOabhqgy8KRHCWh2y1LoyoOBf",
+        "state": "Connected",
+        "jetstream_domain": "CLUSTER01"
+    },
+    "jwt_sync_status": "Complete",
+    "jwt_settings": {
+        "authorization": {},
+        "description": "None",
+        "limits": {
+            "conn": -1,
+            "imports": -1,
+            "data": -1,
+            "subs": -1,
+            "payload": -1,
+            "exports": -1,
+            "wildcards": true,
+            "leaf": -1
+        }
+    },
+    "claims": {
+        "sub": "ABGHKQFIBTMSRU6RC4TV2DFZF43XBINIKELD5ICN6CV52CCITFSODMCW",
+        "nats": {
+            "default_permissions": {
+                "sub": {},
+                "pub": {}
+            },
+            "authorization": {},
+            "imports": [
+                {
+                    "local_subject": "$scp.metrics.*",
+                    "subject": "$scp.metrics.ACC.ABGHKQFIBTMSRU6RC4TV2DFZF43XBINIKELD5ICN6CV52CCITFSODMCW.*",
+                    "name": "[Managed Import] Service Metrics Import",
+                    "type": "service",
+                    "account": "ADZH4CUAN2XNVAWD5ZYS27WPFJXEJDXTECNNPIMQ67RNQ6OMBYYFXIKV"
+                },
+                {
+                    "local_subject": "$JS.EVENT.*.>",
+                    "subject": "$JS.EVENT.*.ACC.ABGHKQFIBTMSRU6RC4TV2DFZF43XBINIKELD5ICN6CV52CCITFSODMCW.>",
+                    "name": "[Managed Import] JS metrics",
+                    "type": "service",
+                    "account": "ADZH4CUAN2XNVAWD5ZYS27WPFJXEJDXTECNNPIMQ67RNQ6OMBYYFXIKV"
+                }
+            ],
+            "signing_keys": [
+                "AB6RLU3JFTZC4ASSEXKO2ZI23AIESD3EAZJHA5Q5N7JJ2ORYHKOUWBNB",
+                "ACJYVUJXCBAF6K4ACXVJ56GSHGIPN3I2V7WRGENGSVYHWSX634UA344H"
+            ],
+            "description": "None",
+            "type": "account",
+            "version": 2,
+            "limits": {
+                "conn": -1,
+                "imports": -1,
+                "data": -1,
+                "subs": -1,
+                "payload": -1,
+                "exports": -1,
+                "wildcards": true,
+                "leaf": -1
+            }
+        },
+        "iss": "OAWY7CKWKL6OQA2HBVWI3ZPCU6GDPOYSRMYILTL4ERV3CU33ILFBPRYM",
+        "name": "ACME",
+        "iat": 1730985681,
+        "jti": "36RIK7WGDPI5CPNNRNQ5NEGFLPQPPDL65V4T4FQXFACBB7SEBKLQ"
+    },
+    "name": "ACME",
+    "id": "2oWWC9eG7XhWdlX8PVD62PRoMkj"
+}
